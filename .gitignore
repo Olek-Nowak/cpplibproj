@@ -1,5 +1,17 @@
 *.db
 *.o
 *.exe
+
+# Zbędne katalogi
 test/
 build/
+
+# Zbędne pliki dokumentacji
+*.js
+*.png
+*.css
+*.svg
+docs/html/search
+docs/html/*.html
+!docs/html/index.html
+docs/latex/
