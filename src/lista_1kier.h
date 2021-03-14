@@ -3,9 +3,9 @@
 
 template <class T>
 struct lista1kElem {
-    T dane;
+    T dane_;
     lista1kElem* nast;
-    lista1kElem();
+    lista1kElem(T dane);
 
 };
 
@@ -15,8 +15,8 @@ struct lista1kElem {
 template <class T>
 class lista_1kier {
 private:
-    lista1kElem* _głowa;
-    lista1kElem* _ogon;
+    lista1kElem* głowa_;
+    lista1kElem* ogon_;
     ~lista_1kier();
 
 public:
