@@ -8,12 +8,12 @@
 template <class T>
 class macierz {
 private:
-    int n, m;
+    int n_, m_;
     T** tab_;
 
 public:
     ~macierz();
-    int &operator()(int x, int y);
+    T& operator()(int x, int y);
     /// Tworzy pustą macierz o wymiarach n x m.
     /// @param n Ilość wierszy macierzy.
     /// @param m Ilość kolumn macierzy.
@@ -21,14 +21,14 @@ public:
     /// Tworzy pustą kwadratową macierz o wymiarach n x n.
     /// @param n Ilość wierszy i kolumn macierzy.
     macierz(int n);
-    /// Tworzy macierz o odpowiednich wymiarach oraz wypełnia ją danymi z pliku.
+    /// Tworzy macierz o wymiarach n x m oraz wypełnia ją danymi z pliku.
     /// @param sciezka Lokalizacja pliku.
-    macierz(std::string sciezka);
+    macierz(std::string sciezka, int n, int m);
     /// Wypisuje zawartość macierzy do konsoli.
-    int druk();
+    void druk();
     /// Zapisuje zawartość macierzy do pliku.
     /// @param sciezka Lokalizacja pliku.
-    int druk(std::string sciezka);
+    void druk(std::string sciezka);
     /// Dokonuje transpozycji macierzy.
     /// @warning Jedynie dla macierzy kwadratowej, o wymiarach n x n.
     void transpozycja();
