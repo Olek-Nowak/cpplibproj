@@ -45,7 +45,7 @@ lista_1kier<T>::~lista_1kier() {
 }
 
 template <class T>
-int lista_1kier<T>::druk() {
+void lista_1kier<T>::druk() {
     if (glowa_ == nullptr)
         cout << "Lista jest pusta.\n";
     lista1kElem<T> *temp = glowa_;
@@ -54,12 +54,11 @@ int lista_1kier<T>::druk() {
         temp = temp->nast_;
 
     }
-    return 0;
 
 }
 
 template <class T>
-int lista_1kier<T>::druk(string sciezka) {
+void lista_1kier<T>::druk(string sciezka) {
     ofstream plik = ofstream(sciezka);
     lista1kElem<T> *temp = glowa_;
     while (temp != nullptr) {
@@ -67,12 +66,11 @@ int lista_1kier<T>::druk(string sciezka) {
         temp = temp->nast_;
 
     }
-    return 0;
 
 }
 
 template <class T>
-int lista_1kier<T>::dodaj(T dane) {
+void lista_1kier<T>::dodaj(T dane) {
     lista1kElem<T> *n = new lista1kElem<T>(dane);
     if (glowa_ == nullptr) {
         glowa_ = n;
@@ -84,14 +82,13 @@ int lista_1kier<T>::dodaj(T dane) {
         ogon_ = n;
 
     }
-    return 0;
 
 }
 
 template <class T>
-int lista_1kier<T>::dodaj(T dane, int pozycja) {
+void lista_1kier<T>::dodaj(T dane, int pozycja) {
     if (pozycja < 0)
-        return -2;
+        return;
     else if (pozycja == 0) {
         lista1kElem<T> *n = new lista1kElem<T>(dane);
         n->nast_ = glowa_;
@@ -114,14 +111,13 @@ int lista_1kier<T>::dodaj(T dane, int pozycja) {
         n->nast_ = t;
 
     }
-    return 0;
 
 }
 
 template <class T>
-int lista_1kier<T>::usun() {
+void lista_1kier<T>::usun() {
     if (glowa_ == nullptr)
-        return -1;
+        return;
     else if (glowa_ == ogon_) {
         delete glowa_;
         ogon_ = nullptr;
@@ -137,12 +133,11 @@ int lista_1kier<T>::usun() {
         ogon_ = temp;
 
     }
-    return 0;
 
 }
 
 template <class T>
-int lista_1kier<T>::usun_napotkany(T dane) {
+void lista_1kier<T>::usun_napotkany(T dane) {
     if (glowa_->dane_ == dane) {
         if (glowa_ == ogon_)
             ogon_ = nullptr;
@@ -169,7 +164,6 @@ int lista_1kier<T>::usun_napotkany(T dane) {
         delete t;
 
     }
-    return 0;
 
 }
 
