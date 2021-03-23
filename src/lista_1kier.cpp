@@ -99,7 +99,7 @@ void lista_1kier<T>::dodaj(T dane, int pozycja) {
         lista1kElem<T> *temp = glowa_;
         for (int i = 1; i < pozycja; i++) {
             if (temp == nullptr)
-                return -1;
+                return;
             temp = temp->nast_;
 
         }
@@ -150,10 +150,10 @@ void lista_1kier<T>::usun_napotkany(T dane) {
     else {
         lista1kElem<T> *temp = glowa_;
         if (temp->nast_ == nullptr)
-            return -1;
+            return;
         while (temp->nast_->dane_ != dane) {
             if (temp->nast_ == nullptr)
-                return -1;
+                return;
             temp = temp->nast_;
 
         }
