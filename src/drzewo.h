@@ -13,7 +13,10 @@ struct drzewoElem {
     void druk_drzewo(int tab);
     void skasuj();
     void dodaj(T dane);
-    void usun(T dane, drzewoElem* poprzedni);
+    drzewoElem<T>* najwiekszy();
+    drzewoElem<T>* najmniejszy();
+    void usun(T dane, drzewoElem* const &poprzedni);
+    drzewoElem<T>* usun_korzen();
 
 };
 
@@ -24,12 +27,13 @@ template <class T>
 class drzewo {
 private:
     drzewoElem<T>* korzen_;
+    bool puste_;
 
 public:
     ~drzewo();
-    /// Tworzy pustą drzewo.
+    /// Tworzy puste drzewo.
     drzewo();
-    /// Tworzy pustą drzewo i wypełnia je elementami o danych z pliku.
+    /// Tworzy puste drzewo i wypełnia je elementami o danych z pliku.
     /// @param sciezka Lokalizacja pliku.
     drzewo(std::string sciezka);
     /// Wypisuje zawartość drzewa do konsoli, zachowując jego strukturę.
@@ -46,6 +50,7 @@ public:
     /// @param dane Wartość szukanego elementu do usunięcia.
     /// @warning Jeszcze nie obsługiwane!
     void usun(T dane);
+    
 
 };
 
