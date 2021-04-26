@@ -102,33 +102,22 @@ void drzewoElem<T>::usun(T dane, drzewoElem<T>* const &poprzedni) {
         wiecej_->usun(dane, this);
     else if(dane == dane_) {
         if(this->mniej_ == nullptr && this->wiecej_ == nullptr) {
-            cout << '\n' << poprzedni->dane_ << '\n';
             if(poprzedni->mniej_ != nullptr && poprzedni->mniej_->dane_ == dane_)
                 poprzedni->mniej_ = nullptr;
             else poprzedni->wiecej_ = nullptr;
             delete this;
 
         }
-        else if(this->mniej_ == nullptr) { //problem
-            drzewoElem<T>* temp = wiecej_->najmniejszy();
-            /*mniej_ = temp->wiecej_;
-            dane_ = temp->dane_;
-            temp->wiecej_ = nullptr;
-            wiecej_->usun(dane_, this);
-            */
+        else if(this->mniej_ == nullptr) {
+            drzewoElem<T>* temp = wiecej_;
             if(poprzedni->mniej_ != nullptr && poprzedni->mniej_->dane_ == dane_)
                 poprzedni->mniej_ = temp;
             else poprzedni->wiecej_ = temp;
             delete this;
 
         }
-        else if(this->wiecej_ == nullptr) { //problem
-            drzewoElem<T>* temp = mniej_->najwiekszy();
-            /*wiecej_ = temp->mniej_;
-            dane_ = temp->dane_;
-            temp->mniej_ = nullptr;
-            mniej_->usun(dane_, this);
-            */
+        else if(this->wiecej_ == nullptr) {
+            drzewoElem<T>* temp = mniej_;
             if(poprzedni->mniej_ != nullptr && poprzedni->mniej_->dane_ == dane_)
                 poprzedni->mniej_ = temp;
             else poprzedni->wiecej_ = temp;
@@ -197,6 +186,70 @@ drzewoElem<T>* drzewoElem<T>::usun_korzen() {
         }
             
     }
+
+}
+
+template <class T>
+int drzewoElem<T>::wysokosc() {
+    if(wiecej_ != nullptr && mniej_ != nullptr)
+        return mniej_->wysokosc() > wiecej_->wysokosc() ? mniej_->wysokosc() + 1 : wiecej_->wysokosc() + 1;
+    else if(wiecej_ != nullptr)
+        return wiecej_->wysokosc() + 1;
+    else if(mniej_ != nullptr)
+        return mniej_->wysokosc() + 1;
+    else return 0;
+
+}
+
+template <class T>
+int drzewoElem<T>::wielkosc() {
+    if(wiecej_ != nullptr && mniej_ != nullptr)
+        return mniej_->wielkosc() + wiecej_->wielkosc() + 1;
+    else if(wiecej_ != nullptr)
+        return wiecej_->wielkosc() + 1;
+    else if(mniej_ != nullptr)
+        return mniej_->wielkosc() + 1;
+    else return 1;
+    
+}
+
+template <class T>
+void drzewoElem<T>::obrot_lewo(drzewoElem<T>* const &poprzedni) {
+    drzewoElem<T>* temp = wiecej_;
+    wiecej_ = temp->mniej_;
+    temp->mniej_ = this;
+    if(poprzedni->mniej_->dane_ == dane_)
+        poprzedni->mniej_ = temp;
+    else poprzedni->wiecej_ = temp;
+    
+}
+
+template <class T>
+void drzewoElem<T>::obrot_prawo(drzewoElem<T>* const &poprzedni) {
+    drzewoElem<T>* temp = mniej_;
+    mniej_ = temp->wiecej_;
+    temp->wiecej_ = this;
+    if(poprzedni->mniej_->dane_ == dane_)
+        poprzedni->mniej_ = temp;
+    else poprzedni->wiecej_ = temp;
+    
+}
+
+template <class T>
+drzewoElem<T>* drzewoElem<T>::obrot_korzen_lewo() {
+    drzewoElem<T> *temp = wiecej_;
+    wiecej_ = temp->mniej_;
+    temp->mniej_ = this;
+    return temp;
+
+}
+
+template <class T>
+drzewoElem<T>* drzewoElem<T>::obrot_korzen_prawo() {
+    drzewoElem<T> *temp = mniej_;
+    mniej_ = temp->wiecej_;
+    temp->wiecej_ = this;
+    return temp;
 
 }
 
@@ -279,10 +332,96 @@ void drzewo<T>::usun(T dane) {
     else {
         if(dane == korzen_->dane_)
             korzen_ = korzen_->usun_korzen();
-        else korzen_->usun(dane, nullptr);
+        else korzen_->usun(dane, korzen_);
         if(korzen_ == nullptr)
             puste_ = true;
     
+    }
+
+}
+
+template <class T>
+int drzewo<T>::wysokosc(T dane) {
+    drzewoElem<T>* temp = korzen_;
+    while(temp->dane_ != dane) {
+        if(temp->dane_ > dane)
+            temp = temp->mniej_;
+        else if(temp->dane_ < dane)
+            temp = temp->wiecej_;
+        else return -1;
+
+    }
+    return temp->wysokosc();
+
+}
+
+template <class T>
+int drzewo<T>::wysokosc() {
+    return korzen_->wysokosc();
+
+}
+
+template <class T>
+int drzewo<T>::wielkosc(T dane) {
+    drzewoElem<T>* temp = korzen_;
+    while(temp->dane_ != dane) {
+        if(temp->dane_ > dane)
+            temp = temp->mniej_;
+        else if(temp->dane_ < dane)
+            temp = temp->wiecej_;
+        else return -1;
+
+    }
+    return temp->wielkosc();
+
+}
+
+template <class T>
+int drzewo<T>::wielkosc() {
+    return korzen_->wielkosc();
+
+}
+
+template <class T>
+void drzewo<T>::obrot_prawo(T dane) {
+    if(dane == korzen_->dane_)
+        korzen_ = korzen_->obrot_korzen_prawo();
+    else {
+        drzewoElem<T>* temp = korzen_;
+        drzewoElem<T>* pop;
+        while(temp->dane_ != dane) {
+            pop = temp;
+            if(temp->dane_ > dane)
+                temp = temp->mniej_;
+            else if(temp->dane_ < dane)
+                temp = temp->wiecej_;
+            else return;
+
+        }
+        temp->obrot_prawo(pop);
+
+    }
+
+}
+
+template <class T>
+void drzewo<T>::obrot_lewo(T dane) {
+    if(dane == korzen_->dane_)
+        korzen_ = korzen_->obrot_korzen_lewo();
+    else {
+        drzewoElem<T>* temp = korzen_;
+        drzewoElem<T>* pop;
+        while(temp->dane_ != dane) {
+            pop = temp;
+            if(temp->dane_ > dane)
+                temp = temp->mniej_;
+            else if(temp->dane_ < dane)
+                temp = temp->wiecej_;
+            else return;
+
+        }
+        temp->obrot_lewo(pop);
+
     }
 
 }
