@@ -1,31 +1,33 @@
-#ifndef LISTA1K
-#define LISTA1K
+#ifndef LISTA2K
+#define LISTA2K
 #include <string>
 
 template <class T>
-struct lista1kElem {
+struct lista2kElem {
     T dane_;
-    lista1kElem* nast_;
-    lista1kElem(T dane);
+    lista2kElem* nast_;
+    lista2kElem* poprz_;
+    lista2kElem(T dane);
 
 };
 
-/// Implementacja listy dynamicznej jednokierunkowej.
+/// Implementacja listy dynamicznej dwukierunkowej.
 
 /// Standardowa dynamiczna struktura danych, alokacja i dealokacja pamięci przebiegają automatycznie.
 template <class T>
-class lista_1kier {
+class lista_2kier
+{
 private:
-    lista1kElem<T>* glowa_;
-    lista1kElem<T>* ogon_;
+    lista2kElem<T> *glowa_;
+    lista2kElem<T> *ogon_;
 
 public:
-    ~lista_1kier();
+    ~lista_2kier();
     /// Tworzy pustą listę jednokierunkową.
-    lista_1kier();
+    lista_2kier();
     /// Tworzy pustą listę jednokierunkową i wypełnia ją danymi z pliku.
     /// @param sciezka Lokalizacja pliku.
-    lista_1kier(std::string sciezka);
+    lista_2kier(std::string sciezka);
     /// Wypisuje zawartość listy do konsoli.
     void druk();
     /// Zapisuje zawartość listy do pliku.
@@ -47,7 +49,6 @@ public:
     /// @param pozycja Indeks pozycji, poczynając od 0.
     /// @returns Zwraca wartość usuniętego elementu.
     T usun(int pozycja);
-
 };
 
 #endif
