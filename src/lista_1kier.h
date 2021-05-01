@@ -18,6 +18,7 @@ class lista_1kier {
 private:
     lista1kElem<T>* glowa_;
     lista1kElem<T>* ogon_;
+    int dlugosc_;
 
 public:
     ~lista_1kier();
@@ -26,6 +27,9 @@ public:
     /// Tworzy pustą listę jednokierunkową i wypełnia ją danymi z pliku.
     /// @param sciezka Lokalizacja pliku.
     lista_1kier(std::string sciezka);
+    /// Znajduje długość listy.
+    /// @returns Chwilowa długość listy.
+    int dlugosc();
     /// Wypisuje zawartość listy do konsoli.
     void druk();
     /// Zapisuje zawartość listy do pliku.
@@ -45,7 +49,7 @@ public:
     void usun_napotkany(T dane);
     /// Usuwa element na określonej pozycji.
     /// @param pozycja Indeks pozycji, poczynając od 0.
-    /// @returns Zwraca wartość usuniętego elementu.
+    /// @returns Wartość usuniętego elementu.
     T usun(int pozycja);
 
 };

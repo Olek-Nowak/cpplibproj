@@ -15,6 +15,7 @@ template <class T>
 lista_1kier<T>::lista_1kier() {
     glowa_ = nullptr;
     ogon_ = nullptr;
+    dlugosc_ = 0;
 
 }
 
@@ -22,11 +23,12 @@ template <class T>
 lista_1kier<T>::lista_1kier(string sciezka) {
     glowa_ = nullptr;
     ogon_ = nullptr;
-    T temp;
+    dlugosc_ = 0;
+    T dane;
     ifstream plik = ifstream(sciezka);
     while (!plik.eof()) {
-        plik >> temp;
-        this->dodaj(temp);
+        plik >> dane;
+        this->dodaj(dane);
 
     }
 }
@@ -42,6 +44,12 @@ lista_1kier<T>::~lista_1kier() {
     }
     glowa_ = nullptr;
     ogon_ = nullptr;
+}
+
+template <class T>
+int lista_1kier<T>::dlugosc() {
+    return dlugosc_;
+
 }
 
 template <class T>
@@ -71,6 +79,7 @@ void lista_1kier<T>::druk(string sciezka) {
 
 template <class T>
 void lista_1kier<T>::dodaj(T dane) {
+    dlugosc_++;
     lista1kElem<T> *n = new lista1kElem<T>(dane);
     if (glowa_ == nullptr) {
         glowa_ = n;
@@ -90,12 +99,14 @@ void lista_1kier<T>::dodaj(T dane, int pozycja) {
     if (pozycja < 0)
         return;
     else if (pozycja == 0) {
+        dlugosc_++;
         lista1kElem<T> *n = new lista1kElem<T>(dane);
         n->nast_ = glowa_;
         glowa_ = n;
 
     }
     else {
+        dlugosc_++;
         lista1kElem<T> *temp = glowa_;
         for (int i = 1; i < pozycja; i++) {
             if (temp == nullptr)
@@ -116,15 +127,17 @@ void lista_1kier<T>::dodaj(T dane, int pozycja) {
 
 template <class T>
 void lista_1kier<T>::usun() {
-    if (glowa_ == nullptr)
+    if(glowa_ == nullptr)
         return;
-    else if (glowa_ == ogon_) {
+    else if(glowa_ == ogon_) {
+        dlugosc_--;
         delete glowa_;
         ogon_ = nullptr;
         glowa_ = nullptr;
 
     }
     else {
+        dlugosc_--;
         lista1kElem<T> *temp = glowa_;
         while (temp->nast_ != ogon_)
             temp = temp->nast_;
@@ -138,7 +151,8 @@ void lista_1kier<T>::usun() {
 
 template <class T>
 void lista_1kier<T>::usun_napotkany(T dane) {
-    if (glowa_->dane_ == dane) {
+    if(glowa_->dane_ == dane) {
+        dlugosc_--;
         if (glowa_ == ogon_)
             ogon_ = nullptr;
         lista1kElem<T> *temp = glowa_;
@@ -148,6 +162,7 @@ void lista_1kier<T>::usun_napotkany(T dane) {
 
     }
     else {
+        dlugosc_--;
         lista1kElem<T> *temp = glowa_;
         if (temp->nast_ == nullptr)
             return;
@@ -172,6 +187,7 @@ T lista_1kier<T>::usun(int pozycja) {
     if (pozycja < 0)
         return NULL;
     else if (pozycja == 0) {
+        dlugosc_--;
         if (glowa_ == ogon_)
             ogon_ = nullptr;
         lista1kElem<T> *temp = glowa_;
@@ -181,6 +197,7 @@ T lista_1kier<T>::usun(int pozycja) {
 
     }
     else {
+        dlugosc_--;
         lista1kElem<T> *temp = glowa_;
         for (int i = 1; i < pozycja; i++) {
             if (temp->nast_ == nullptr)

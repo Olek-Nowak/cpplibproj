@@ -20,6 +20,7 @@ class lista_2kier
 private:
     lista2kElem<T> *glowa_;
     lista2kElem<T> *ogon_;
+    int dlugosc_;
 
 public:
     ~lista_2kier();
@@ -28,6 +29,9 @@ public:
     /// Tworzy pustą listę jednokierunkową i wypełnia ją danymi z pliku.
     /// @param sciezka Lokalizacja pliku.
     lista_2kier(std::string sciezka);
+    /// Znajduje długość listy.
+    /// @returns Chwilowa długość listy.
+    int dlugosc();
     /// Wypisuje zawartość listy do konsoli.
     void druk();
     /// Zapisuje zawartość listy do pliku.
@@ -47,7 +51,7 @@ public:
     void usun_napotkany(T dane);
     /// Usuwa element na określonej pozycji.
     /// @param pozycja Indeks pozycji, poczynając od 0.
-    /// @returns Zwraca wartość usuniętego elementu.
+    /// @returns Wartość usuniętego elementu.
     T usun(int pozycja);
 };
 
