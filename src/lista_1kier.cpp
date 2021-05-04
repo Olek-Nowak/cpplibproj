@@ -81,7 +81,7 @@ template <class T>
 void lista_1kier<T>::dodaj(T dane) {
     dlugosc_++;
     lista1kElem<T> *n = new lista1kElem<T>(dane);
-    if (glowa_ == nullptr) {
+    if (ogon_ == nullptr) {
         glowa_ = n;
         ogon_ = n;
 
@@ -96,24 +96,24 @@ void lista_1kier<T>::dodaj(T dane) {
 
 template <class T>
 void lista_1kier<T>::dodaj(T dane, int pozycja) {
-    if (pozycja < 0)
+    if(pozycja < 0)
         return;
-    else if (pozycja == 0) {
+    else if(pozycja == 0) {
         dlugosc_++;
-        lista1kElem<T> *n = new lista1kElem<T>(dane);
+        lista1kElem<T>* n = new lista1kElem<T>(dane);
         n->nast_ = glowa_;
         glowa_ = n;
 
     }
     else {
-        dlugosc_++;
-        lista1kElem<T> *temp = glowa_;
+        lista1kElem<T>* temp = glowa_;
         for (int i = 1; i < pozycja; i++) {
             if (temp == nullptr)
                 return;
             temp = temp->nast_;
 
         }
+        dlugosc_++;
         lista1kElem<T> *n = new lista1kElem<T>(dane);
         if (temp->nast_ == nullptr)
             ogon_ = n;
@@ -162,7 +162,6 @@ void lista_1kier<T>::usun_napotkany(T dane) {
 
     }
     else {
-        dlugosc_--;
         lista1kElem<T> *temp = glowa_;
         if (temp->nast_ == nullptr)
             return;
@@ -172,6 +171,7 @@ void lista_1kier<T>::usun_napotkany(T dane) {
             temp = temp->nast_;
 
         }
+        dlugosc_--;
         if (temp->nast_ == ogon_)
             ogon_ = temp;
         lista1kElem<T> *t = temp->nast_;
@@ -192,12 +192,13 @@ T lista_1kier<T>::usun(int pozycja) {
             ogon_ = nullptr;
         lista1kElem<T> *temp = glowa_;
         glowa_ = temp->nast_;
+        T wynik = temp->dane_;
         delete temp;
         glowa_ = nullptr;
+        return wynik;
 
     }
     else {
-        dlugosc_--;
         lista1kElem<T> *temp = glowa_;
         for (int i = 1; i < pozycja; i++) {
             if (temp->nast_ == nullptr)
@@ -205,6 +206,7 @@ T lista_1kier<T>::usun(int pozycja) {
             temp = temp->nast_;
             
         }
+        dlugosc_--;
         if (temp->nast_ == ogon_)
             ogon_ = temp;
         lista1kElem<T> *t = temp->nast_;
