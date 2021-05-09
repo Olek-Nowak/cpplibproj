@@ -13,6 +13,7 @@ private:
     int dlugosc_;
     int odczyt_;
     int zapis_;
+    bool pusta_;
 
 public:
     ~kolejka();
@@ -23,18 +24,18 @@ public:
     /// @param dlugosc Maksymalna długość kolejki, większa od 0.
     /// @param sciezka Lokalizacja pliku.
     kolejka(int dlugosc, std::string sciezka);
-    /// Zapisuje całą zawartość kolejki do pliku.
+    /// Zapisuje całą zawartość kolejki różną od NULL do pliku.
     /// @param sciezka Lokalizacja pliku.
     void druk(std::string sciezka);
     /// Podgląda wartość pierwszego elementu bez dekolejkowania go.
-    /// @param returns Wartość pierwszego elementu kolejki.
-    T podglad();
-    /// Umieszcza nowy element na końcu kolejki.
+    /// @param dane Wartość pierwszego elementu kolejki, zwracana przez referencję.
+    void podglad(T& dane);
+    /// Umieszcza nowy element na końcu kolejki, o ile jej wielkość jest mniejsza od maksymalnej wielkości.
     /// @param dane Wartość dodawanego elementu.
     void kolejkuj(T dane);
     /// Usuwa pierwszy element kolejki.
-    /// @param returns Wartość zdekolejkowanego elementu.
-    T dekolejkuj();
+    /// @param dane Wartość zdekolejkowanego elementu, zwracana przez referencję.
+    void dekolejkuj(T& dane);
 
 };
 
