@@ -219,7 +219,32 @@ T lista_1kier<T>::usun(int pozycja) {
 
 }
 
+template <class T>
+void lista_1kier<T>::sortuj() {
+    if(glowa_ == nullptr || glowa_->nast_ == nullptr)
+        return;
+    lista1kElem<T>* sort = glowa_;
+    lista1kElem<T>* min = glowa_;
+    lista1kElem<T>* t = glowa_;
+    T temp;
+    while(sort != nullptr) {
+        min = sort;
+        t = sort;
+        while(t != nullptr) {
+            if(t->dane_ < min->dane_)
+                min = t;
+            t = t->nast_;
+
+        }
+        temp = sort->dane_;
+        sort->dane_ = min->dane_;
+        min->dane_ = temp;
+        sort = sort->nast_;
+
+    }
+
+}
+
 template class lista_1kier<int>;
 template class lista_1kier<char>;
 template class lista_1kier<float>;
-template class lista_1kier<string>;

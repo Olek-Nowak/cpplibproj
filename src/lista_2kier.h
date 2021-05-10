@@ -24,9 +24,9 @@ private:
 
 public:
     ~lista_2kier();
-    /// Tworzy pustą listę jednokierunkową.
+    /// Tworzy pustą listę dwukierunkową.
     lista_2kier();
-    /// Tworzy pustą listę jednokierunkową i wypełnia ją danymi z pliku.
+    /// Tworzy pustą listę dwukierunkową i wypełnia ją danymi z pliku.
     /// @param sciezka Lokalizacja pliku.
     lista_2kier(std::string sciezka);
     /// Znajduje długość listy.
@@ -53,6 +53,9 @@ public:
     /// @param pozycja Indeks pozycji, poczynając od 0.
     /// @returns Wartość usuniętego elementu.
     T usun(int pozycja);
+    /// Sortuje listę.
+    void sortuj();
+    
 };
 
 #endif

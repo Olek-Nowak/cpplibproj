@@ -75,7 +75,7 @@ void lista_2kier<T>::druk() {
 template <class T>
 void lista_2kier<T>::druk(string sciezka) {
     ofstream plik = ofstream(sciezka);
-    lista2kElem<T> *temp = glowa_;
+    lista2kElem<T>* temp = glowa_;
     while (temp != nullptr) {
         plik << temp->dane_ << '\n';
         temp = temp->nast_;
@@ -173,10 +173,12 @@ void lista_2kier<T>::usun_napotkany(T dane) {
     dlugosc_--;
     if(temp->poprz_ == nullptr)
         glowa_ = temp->nast_;
+    else
+        temp->poprz_->nast_ = temp->nast_;
     if(temp->nast_ == nullptr)
         ogon_ = temp->poprz_;
-    temp->poprz_->nast_ = temp->nast_;
-    temp->nast_->poprz_ = temp->poprz_;
+    else
+        temp->nast_->poprz_ = temp->poprz_;
     delete temp;
     
 }
@@ -220,7 +222,32 @@ T lista_2kier<T>::usun(int pozycja) {
 
 }
 
+template <class T>
+void lista_2kier<T>::sortuj() {
+    if(glowa_ == nullptr || glowa_->nast_ == nullptr)
+        return;
+    lista2kElem<T>* sort = glowa_;
+    lista2kElem<T>* min = glowa_;
+    lista2kElem<T>* t = glowa_;
+    T temp;
+    while(sort != nullptr) {
+        min = sort;
+        t = sort;
+        while(t != nullptr) {
+            if(t->dane_ < min->dane_)
+                min = t;
+            t = t->nast_;
+
+        }
+        temp = sort->dane_;
+        sort->dane_ = min->dane_;
+        min->dane_ = temp;
+        sort = sort->nast_;
+
+    }
+
+}
+
 template class lista_2kier<int>;
 template class lista_2kier<char>;
 template class lista_2kier<float>;
-template class lista_2kier<string>;

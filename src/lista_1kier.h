@@ -51,6 +51,8 @@ public:
     /// @param pozycja Indeks pozycji, poczynając od 0.
     /// @returns Wartość usuniętego elementu.
     T usun(int pozycja);
+    /// Sortuje listę.
+    void sortuj();
 
 };
 
