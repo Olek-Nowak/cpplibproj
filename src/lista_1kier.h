@@ -43,14 +43,15 @@ public:
     /// @param pozycja Indeks pozycji, poczynając od 0.
     void dodaj(T dane, int pozycja);
     /// Usuwa ostatni element listy.
-    void usun();
+    /// @param dane Wartość usuniętego elementu, zwracana przez referencję.
+    void usun(T& dane);
     /// Usuwa pierwszy napotkany element listy o danej wartości.
     /// @param dane Wartość szukanego elementu do usunięcia.
     void usun_napotkany(T dane);
     /// Usuwa element na określonej pozycji.
     /// @param pozycja Indeks pozycji, poczynając od 0.
-    /// @returns Wartość usuniętego elementu.
-    T usun(int pozycja);
+    /// @param dane Wartość usuniętego elementu, zwracana przez referencję.
+    void usun(int pozycja, T& dane);
     /// Sortuje listę.
     void sortuj();
 

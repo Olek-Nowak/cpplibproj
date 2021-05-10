@@ -136,19 +136,21 @@ void lista_2kier<T>::dodaj(T dane, int pozycja) {
 }
 
 template <class T>
-void lista_2kier<T>::usun() {
+void lista_2kier<T>::usun(T& dane) {
     if(ogon_ == nullptr)
         return;
     else {
         dlugosc_--;
         if(ogon_->poprz_ == nullptr) {
             glowa_ = nullptr;
+            dane = ogon_->dane_;
             delete ogon_;
             ogon_ = nullptr;
 
         }
         else {
             lista2kElem<T>* temp = ogon_->poprz_;
+            dane = ogon_->dane_;
             delete ogon_;
             ogon_ = temp;
             ogon_->nast_ = nullptr;
@@ -184,9 +186,9 @@ void lista_2kier<T>::usun_napotkany(T dane) {
 }
 
 template <class T>
-T lista_2kier<T>::usun(int pozycja) {
+void lista_2kier<T>::usun(int pozycja, T& dane) {
     if(pozycja < 0)
-        return NULL;
+        return;
     else if(pozycja == 0) {
         dlugosc_--;
         if(glowa_->nast_ == nullptr)
@@ -194,16 +196,16 @@ T lista_2kier<T>::usun(int pozycja) {
         lista2kElem<T>* temp = glowa_;
         glowa_ = temp->nast_;
         glowa_->poprz_ = nullptr;
-        T wynik = temp->dane_;
+        dane = temp->dane_;
         delete temp;
-        return wynik;
+        return;
 
     }
     else {
         lista2kElem<T>* temp = glowa_;
         for(int i = 0; i < pozycja; i++) {
             if(temp == nullptr)
-                return NULL;
+                return;
             temp = temp->nast_;
 
         }
@@ -214,9 +216,9 @@ T lista_2kier<T>::usun(int pozycja) {
             ogon_ = temp->poprz_;
         temp->nast_->poprz_ = temp->poprz_;
         temp->poprz_->nast_ = temp->nast_;
-        T wynik = temp->dane_;
+        dane = temp->dane_;
         delete temp;
-        return wynik;
+        return;
 
     }
 
