@@ -155,12 +155,11 @@ template <class T>
 void lista_1kier<T>::usun_napotkany(T dane) {
     if(glowa_->dane_ == dane) {
         dlugosc_--;
-        if (glowa_ == ogon_)
+        if(glowa_ == ogon_)
             ogon_ = nullptr;
         lista1kElem<T> *temp = glowa_;
         glowa_ = temp->nast_;
         delete temp;
-        glowa_ = nullptr;
 
     }
     else {
