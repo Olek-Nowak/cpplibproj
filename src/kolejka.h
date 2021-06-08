@@ -30,7 +30,7 @@ public:
     /// Podgląda wartość pierwszego elementu bez dekolejkowania go.
     /// @param dane Wartość pierwszego elementu kolejki, zwracana przez referencję.
     void podglad(T& dane);
-    /// Umieszcza nowy element na końcu kolejki, o ile jej wielkość jest mniejsza od maksymalnej wielkości.
+    /// Umieszcza nowy element na końcu kolejki, o ile nie skutkuje to jej przepełnieniem.
     /// @param dane Wartość dodawanego elementu.
     void kolejkuj(T dane);
     /// Usuwa pierwszy element kolejki.

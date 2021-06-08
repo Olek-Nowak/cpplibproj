@@ -26,6 +26,11 @@ lista_1kier<T>::lista_1kier(string sciezka) {
     dlugosc_ = 0;
     T dane;
     ifstream plik = ifstream(sciezka);
+    if(!plik.good()) {
+        cout << "Plik niedostępny.";
+        return;
+        
+    }
     while (!plik.eof()) {
         plik >> dane;
         this->dodaj(dane);
@@ -54,7 +59,7 @@ int lista_1kier<T>::dlugosc() {
 
 template <class T>
 void lista_1kier<T>::druk() {
-    if (glowa_ == nullptr)
+    if(glowa_ == nullptr)
         cout << "Lista jest pusta.\n";
     lista1kElem<T> *temp = glowa_;
     while (temp != nullptr) {
@@ -68,6 +73,11 @@ void lista_1kier<T>::druk() {
 template <class T>
 void lista_1kier<T>::druk(string sciezka) {
     ofstream plik = ofstream(sciezka);
+    if(!plik.good()) {
+        cout << "Plik niedostępny.";
+        return;
+        
+    }
     lista1kElem<T> *temp = glowa_;
     while (temp != nullptr) {
         plik << temp->dane_ << '\n';
@@ -96,8 +106,11 @@ void lista_1kier<T>::dodaj(T dane) {
 
 template <class T>
 void lista_1kier<T>::dodaj(T dane, int pozycja) {
-    if(pozycja < 0)
+    if(pozycja < 0) {
+        cout << "Niepoprawna pozycja elementu.\n";
         return;
+
+    }
     else if(pozycja == 0) {
         dlugosc_++;
         lista1kElem<T>* n = new lista1kElem<T>(dane);
@@ -167,8 +180,11 @@ void lista_1kier<T>::usun_napotkany(T dane) {
         if (temp->nast_ == nullptr)
             return;
         while (temp->nast_->dane_ != dane) {
-            if (temp->nast_ == nullptr)
+            if (temp->nast_ == nullptr) {
+                cout << "Element o danej wartości nie istnieje.\n";
                 return;
+
+            }
             temp = temp->nast_;
 
         }
@@ -185,8 +201,11 @@ void lista_1kier<T>::usun_napotkany(T dane) {
 
 template <class T>
 void lista_1kier<T>::usun(int pozycja, T& dane) {
-    if (pozycja < 0)
+    if(pozycja < 0) {
+        cout << "Niepoprawna pozycja elementu.\n";
         return;
+
+    }
     else if (pozycja == 0) {
         dlugosc_--;
         if (glowa_ == ogon_)
@@ -201,8 +220,11 @@ void lista_1kier<T>::usun(int pozycja, T& dane) {
     else {
         lista1kElem<T> *temp = glowa_;
         for (int i = 1; i < pozycja; i++) {
-            if (temp->nast_ == nullptr)
+            if (temp->nast_ == nullptr) {
+                cout << "Element o danej wartości nie istnieje.\n";
                 return;
+
+            }
             temp = temp->nast_;
             
         }

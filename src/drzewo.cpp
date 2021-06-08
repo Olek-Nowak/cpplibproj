@@ -74,7 +74,7 @@ void drzewoElem<T>::dodaj(T dane) {
         wiecej_ = n;
 
     }
-    else cout << "Wartosc " << dane << " jest juz zawarta w drzewie\n";
+    else cout << "Wartosc " << dane << " jest juz zawarta w drzewie.\n";
 
 }
 
@@ -143,7 +143,7 @@ void drzewoElem<T>::usun(T dane, drzewoElem<T>* const &poprzedni) {
 
     }
     else
-        cout << "Wartosc " << dane << " nie istnieje\n";
+        cout << "Wartosc " << dane << " nie należy do drzewa.\n";
 
 }
 
@@ -275,10 +275,15 @@ drzewo<T>::drzewo(string sciezka) {
     korzen_ = new drzewoElem<T>(NULL);
     puste_ = true;
     ifstream plik = ifstream(sciezka);
-    T temp;
-    while(!plik.eof()) {
-        plik >> temp;
-        this->dodaj(temp);
+    if(!plik.good())
+        cout << "Plik niedostępny.";
+    else {
+        T temp;
+        while(!plik.eof()) {
+            plik >> temp;
+            this->dodaj(temp);
+
+        }
 
     }
 
@@ -305,6 +310,11 @@ void drzewo<T>::druk_inorder(string sciezka) {
     if(korzen_ == nullptr && puste_)
         return;
     ofstream plik = ofstream(sciezka);
+    if(!plik.good()) {
+        cout << "Plik niedostępny.";
+        return;
+        
+    }
     korzen_->druk_inorder(plik);
 
 }
@@ -348,7 +358,11 @@ int drzewo<T>::wysokosc(T dane) {
             temp = temp->mniej_;
         else if(temp->dane_ < dane)
             temp = temp->wiecej_;
-        else return -1;
+        else {
+            cout << "Dane poddrzewo nie istenieje."
+            return -1;
+
+        }
 
     }
     return temp->wysokosc();
@@ -369,7 +383,11 @@ int drzewo<T>::wielkosc(T dane) {
             temp = temp->mniej_;
         else if(temp->dane_ < dane)
             temp = temp->wiecej_;
-        else return -1;
+        else {
+            cout << "Dane poddrzewo nie istenieje."
+            return -1;
+            
+        }
 
     }
     return temp->wielkosc();

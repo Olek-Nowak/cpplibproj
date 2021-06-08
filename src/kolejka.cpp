@@ -12,30 +12,39 @@ kolejka<T>::~kolejka() {
 
 template <class T>
 kolejka<T>::kolejka(int dlugosc) {
-    dlugosc_ = dlugosc;
-    tablica_ = new T [dlugosc];
-    zapis_ = 0;
-    odczyt_ = 0;
-    pusta_ = true;
+    if(dlugosc > 0) {
+        dlugosc_ = dlugosc;
+        tablica_ = new T [dlugosc];
+        zapis_ = 0;
+        odczyt_ = 0;
+        pusta_ = true;
+        
+    }
     
 }
 
 template <class T>
 kolejka<T>::kolejka(int dlugosc, string sciezka) {
-    dlugosc_ = dlugosc;
-    tablica_ = new T [dlugosc];
-    zapis_ = 0;
-    odczyt_ = 0;
-    pusta_ = true;
-    T temp;
-    ifstream plik = ifstream(sciezka);
-    if(!plik.good())
-        return;
-    for(int i = 0; i < dlugosc; i++) {
-        if(plik.eof())
+    if(dlugosc > 0) {
+        dlugosc_ = dlugosc;
+        tablica_ = new T [dlugosc];
+        zapis_ = 0;
+        odczyt_ = 0;
+        pusta_ = true;
+        T temp;
+        ifstream plik = ifstream(sciezka);
+        if(!plik.good()) {
+            cout << "Plik niedostępny.";
             return;
-        plik >> temp;
-        kolejkuj(temp);
+
+        }
+        for(int i = 0; i < dlugosc; i++) {
+            if(plik.eof())
+                return;
+            plik >> temp;
+            kolejkuj(temp);
+
+        }
 
     }
 
@@ -46,8 +55,11 @@ void kolejka<T>::druk(string sciezka) {
     if(pusta_)
         return;
     ofstream plik = ofstream(sciezka);
-    if(!plik.good())
+    if(!plik.good()) {
+        cout << "Plik niedostępny.";
         return;
+        
+    }
     for(int i = 0; i < dlugosc_; i++)
         plik << tablica_[i] << '\n';
     plik.close();

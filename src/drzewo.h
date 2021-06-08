@@ -50,25 +50,25 @@ public:
     /// Zapisuje zawartość drzewa posortowaną rosnąco do pliku.
     /// @param sciezka Lokalizacja pliku.
     void druk_inorder(std::string sciezka);
-    /// Dodaje nowy element w zgodnie z zasadami binarnego drzewa poszukiwań.
+    /// Dodaje nowy element zgodnie z zasadami binarnego drzewa poszukiwań.
     /// @param dane Wartość dodawanego elementu.
     void dodaj(T dane);
     /// Usuwa element drzewa o danej wartości.
     /// @param dane Wartość szukanego elementu do usunięcia.
     void usun(T dane);
-    /// Znajduje wysokość poddrzewa danego elementu.
-    /// @param dane Wartość elementu o szukanej wysokości.
+    /// Znajduje wysokość poddrzewa zaczynającego się danym elementem.
+    /// @param dane Pierwszy element poddrzewa.
     /// @returns Wysokość poddrzewa.
     int wysokosc(T dane);
-    /// Znajduje wysokość drzewa.
-    /// @returns Wysokość drzewa.
+    /// Znajduje wysokość całego drzewa.
+    /// @returns Wysokość całego drzewa.
     int wysokosc();
-    /// Znajduje wielkość poddrzewa danego elementu.
-    /// @param dane Wartość elementu o szukanej wielkości.
+    /// Znajduje wielkość poddrzewa zaczynającego się danym elementem.
+    /// @param dane Pierwszy element poddrzewa.
     /// @returns Wielkość poddrzewa.
     int wielkosc(T dane);
-    /// Znajduje wielkość drzewa.
-    /// @returns Wielkość drzewa.
+    /// Znajduje wielkość całego drzewa.
+    /// @returns Wielkość całego drzewa.
     int wielkosc();
     /// Wykonuje obrót w prawo drzewa względem danego elementu.
     /// @param dane Wartość obracanego elementu.

@@ -13,6 +13,11 @@ private:
 
 public:
     ~macierz();
+    /// Umożliwia dostęp do wybranej komórki macierzy.
+    /// Pozwala zarówno na ustawienie, jak i odczytanie wartości komórki.
+    /// @param x Numer wiersza macierzy.
+    /// @param y Numer kolumny macierzy.
+    /// @returns Wartość wybranej komórki.
     T& operator()(int x, int y);
     /// Tworzy pustą macierz o wymiarach n x m.
     /// @param n Ilość wierszy macierzy.

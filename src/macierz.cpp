@@ -22,41 +22,55 @@ macierz<T>::~macierz() {
 
 template <class T>
 macierz<T>::macierz(int n, int m) {
-    tab_ = new T* [n];
-    for(int i = 0; i < n; i++)
-        tab_[i] = new T [m];
-    n_ = n;
-    m_ = m;
+    if(n > 0 && m > 0) {
+        tab_ = new T* [n];
+        for(int i = 0; i < n; i++)
+            tab_[i] = new T [m];
+        n_ = n;
+        m_ = m;
+
+    }
 
 }
 
 template <class T>
 macierz<T>::macierz(int n) {
-    tab_ = new T* [n];
-    for(int i = 0; i < n; i++)
-        tab_[i] = new T [n];
-    n_ = n;
-    m_ = n;
+    if(n > 0) {
+        tab_ = new T* [n];
+        for(int i = 0; i < n; i++)
+            tab_[i] = new T [n];
+        n_ = n;
+        m_ = n;
+
+    }
 
 }
 
 template <class T>
 macierz<T>::macierz(string sciezka, int n, int m) {
-    tab_ = new T* [n];
-    for(int i = 0; i < n; i++)
-        tab_[i] = new T [m];
-    n_ = n;
-    m_ = m;
-    T temp;
-    ifstream plik = ifstream(sciezka);
-    for(int i = 0; i < n; i++)
-        for(int j = 0; j < m; j++) {
-            if(plik.eof())
-                return;
-            plik >> temp;
-            tab_[i][j] = temp;
+    if(n > 0 && m > 0) {
+        tab_ = new T* [n];
+        for(int i = 0; i < n; i++)
+            tab_[i] = new T [m];
+        n_ = n;
+        m_ = m;
+        T temp;
+        ifstream plik = ifstream(sciezka);
+        if(!plik.good())
+            cout << "Plik niedostępny.";
+        else {
+            for(int i = 0; i < n; i++)
+                for(int j = 0; j < m; j++) {
+                    if(plik.eof())
+                        return;
+                    plik >> temp;
+                    tab_[i][j] = temp;
+
+                }
 
         }
+
+    }
 
 }
 
@@ -74,6 +88,11 @@ void macierz<T>::druk() {
 template <class T>
 void macierz<T>::druk(string sciezka) {
     ofstream plik = ofstream(sciezka);
+    if(!plik.good()) {
+        cout << "Plik niedostępny.";
+        return;
+        
+    }
     for(int i = 0; i < n_; i++) {
         for(int j = 0; j < m_; j++)
             plik << tab_[i][j] << '\t';
@@ -86,6 +105,11 @@ void macierz<T>::druk(string sciezka) {
 
 template <class T>
 macierz<T> macierz<T>::minor(int x, int y) {
+    if(x < 0 || y < 0 || x >= n_ || y >= m_) {
+        cout << "Wykreślane wiersze minoru muszą zawierać się w macierzy.\n"
+        return nullptr;
+
+    }
     macierz<T> m = macierz<T>(n_-1, m_-1);
     bool inx = false, iny;
     for(int i = 0; i < n_-1; i++) {
@@ -124,8 +148,11 @@ void macierz<T>::transpozycja() {
 
 template <class T>
 void macierz<T>::przesun_wiersz(int x, int ilosc) {
-    if(x < 0 || x >= n_)
+    if(x < 0 || x >= n_) {
+        cout << "Przesuwany wiersz musi zawierać się w macierzy.\n";
         return;
+
+    }
     if(ilosc < 0) {
         int l = (-1*ilosc) % m_;
         for(int i = 0; i < l; i++) {
@@ -159,8 +186,11 @@ void macierz<T>::przesun_wiersz(int x, int ilosc) {
 
 template <class T>
 void macierz<T>::przesun_kolumne(int y, int ilosc) {
-    if(y < 0 || y >= m_)
+    if(y < 0 || y >= m_) {
+        cout << "Przesuwana kolumna musi zawierać się w macierzy.\n";
         return;
+
+    }
     if(ilosc < 0) {
         int l = (-1*ilosc) % n_;
         for(int i = 0; i < -1*ilosc; i++) {

@@ -38,8 +38,11 @@ lista_2kier<T>::lista_2kier(string sciezka) {
     ogon_ = nullptr;
     dlugosc_ = 0;
     ifstream plik = ifstream(sciezka);
-    if(!plik.good())
+    if(!plik.good()) {
+        cout << "Plik niedostępny.";
         return;
+        
+    }
     T dane;
     while(!plik.eof()) {
         plik >> dane;
@@ -75,6 +78,11 @@ void lista_2kier<T>::druk() {
 template <class T>
 void lista_2kier<T>::druk(string sciezka) {
     ofstream plik = ofstream(sciezka);
+    if(!plik.good()) {
+        cout << "Plik niedostępny.";
+        return;
+        
+    }
     lista2kElem<T>* temp = glowa_;
     while (temp != nullptr) {
         plik << temp->dane_ << '\n';
@@ -104,8 +112,11 @@ void lista_2kier<T>::dodaj(T dane) {
 
 template <class T>
 void lista_2kier<T>::dodaj(T dane, int pozycja) {
-    if(pozycja < 0)
+    if(pozycja < 0) {
+        cout << "Niepoprawna pozycja elementu.\n";
         return;
+
+    }
     else if(pozycja == 0) {
         dlugosc_++;
         lista2kElem<T>* n = new lista2kElem<T>(dane);
@@ -167,8 +178,11 @@ void lista_2kier<T>::usun_napotkany(T dane) {
         return;
     lista2kElem<T>* temp = glowa_;
     while(temp->dane_ != dane) {
-        if(temp->nast_ == nullptr)
+        if (temp->nast_ == nullptr) {
+            cout << "Element o danej wartości nie istnieje.\n";
             return;
+                
+        }
         temp = temp->nast_;
 
     }
@@ -187,8 +201,11 @@ void lista_2kier<T>::usun_napotkany(T dane) {
 
 template <class T>
 void lista_2kier<T>::usun(int pozycja, T& dane) {
-    if(pozycja < 0)
+    if(pozycja < 0) {
+        cout << "Niepoprawna pozycja elementu.\n";
         return;
+
+    }
     else if(pozycja == 0) {
         dlugosc_--;
         if(glowa_->nast_ == nullptr)
@@ -204,8 +221,11 @@ void lista_2kier<T>::usun(int pozycja, T& dane) {
     else {
         lista2kElem<T>* temp = glowa_;
         for(int i = 0; i < pozycja; i++) {
-            if(temp == nullptr)
+            if(temp == nullptr) {
+                cout << "Element o danej wartości nie istnieje.\n";
                 return;
+
+            }
             temp = temp->nast_;
 
         }
