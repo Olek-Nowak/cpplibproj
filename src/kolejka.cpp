@@ -62,6 +62,8 @@ void kolejka<T>::druk(string sciezka) {
     }
     for(int i = 0; i < dlugosc_; i++)
         plik << tablica_[i] << '\n';
+    plik << "zapis: " << zapis_ << '\n';
+    plik << "odczyt: " << odczyt_ << '\n';
     plik.close();
 
 }

@@ -106,8 +106,8 @@ void macierz<T>::druk(string sciezka) {
 template <class T>
 macierz<T> macierz<T>::minor(int x, int y) {
     if(x < 0 || y < 0 || x >= n_ || y >= m_) {
-        cout << "Wykreślane wiersze minoru muszą zawierać się w macierzy.\n"
-        return nullptr;
+        cout << "Wykreślane wiersze minoru muszą zawierać się w macierzy.\n";
+        return NULL;
 
     }
     macierz<T> m = macierz<T>(n_-1, m_-1);

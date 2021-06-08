@@ -293,7 +293,11 @@ template <class T>
 void drzewo<T>::druk_drzewo() {
     if(korzen_ == nullptr && puste_)
         cout << "Drzewo jest puste\n";
-    else korzen_->druk_drzewo(0);
+    else {
+        cout << '\n';
+        korzen_->druk_drzewo(0);
+
+    }
 
 }
 
@@ -359,7 +363,7 @@ int drzewo<T>::wysokosc(T dane) {
         else if(temp->dane_ < dane)
             temp = temp->wiecej_;
         else {
-            cout << "Dane poddrzewo nie istenieje."
+            cout << "Dane poddrzewo nie istenieje.";
             return -1;
 
         }
@@ -384,7 +388,7 @@ int drzewo<T>::wielkosc(T dane) {
         else if(temp->dane_ < dane)
             temp = temp->wiecej_;
         else {
-            cout << "Dane poddrzewo nie istenieje."
+            cout << "Dane poddrzewo nie istenieje.";
             return -1;
             
         }
