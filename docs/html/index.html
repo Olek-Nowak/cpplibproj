@@ -96,8 +96,37 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title">cpplibproj - demo </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Krótki przykład użycia biblioteki. </p>
-</div></div><!-- PageDoc -->
+<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+Wstęp - kompilacja</h1>
+<p>cpplibproj jest dystrybuowana jako biblioteka statyczna, co oznacza że aby z niej skorzystać, należy załączyć do pliku programu głównego <b>wszystkie pliki nagłówkowe</b> z których będziemy korzystać, a sam program kompilować <b>wraz z plikiem biblioteki: cpplibproj.a</b>, poprzez skonfigurowanie automatycznego kompilatora bądź ręczne polecenia kompilacji.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md2"></a>
+Przykład użycia - dodawanie macierzy</h1>
+<div class="fragment"><div class="line">#include &quot;macierz.h&quot;</div>
+<div class="line">using namespace std;</div>
+<div class="line"> </div>
+<div class="line">int main() {</div>
+<div class="line">    // Deklaracja dwóch macierzy liczbowych 4 x 4:</div>
+<div class="line">    macierz&lt;int&gt; m1 = macierz&lt;int&gt;(4);</div>
+<div class="line">    macierz&lt;int&gt; m2 = macierz&lt;int&gt;(4);</div>
+<div class="line">    // Wypełnienie pól macierzy:</div>
+<div class="line">    for(int i = 0; i &lt; 4; i++) {</div>
+<div class="line">        for(int j = 0; j &lt; 4; j++) {</div>
+<div class="line">            m2(i, j) = i + j;</div>
+<div class="line">            m1(j, 1) = i - j;</div>
+<div class="line"> </div>
+<div class="line">        }           </div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line">    // Deklaracja macierzy przechowującej wynik:</div>
+<div class="line">    macierz&lt;int&gt; wynik = macierz&lt;int&gt;(4);</div>
+<div class="line">    // Dodawanie macierzy:</div>
+<div class="line">    for(int i = 0; i &lt; 4; i++)</div>
+<div class="line">        for(int j = 0; j &lt; 4; j++)</div>
+<div class="line">            wynik(i, j) = m1(i, j) + m2(i, j);</div>
+<div class="line"> </div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

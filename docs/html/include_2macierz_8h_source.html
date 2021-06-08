@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>cpplibproj: Plik źródłowy include/macierz.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">cpplibproj
+   </div>
+   <div id="projectbrief">Biblioteka struktur danych</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('include_2macierz_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">macierz.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MACIERZ</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MACIERZ</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span><a class="code" href="classmacierz.html">macierz</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> n_, m_;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    T** tab_;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    ~<a class="code" href="classmacierz.html">macierz</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    T&amp; <a class="code" href="classmacierz.html#ad1411b107c2360089b2950f76f261aed">operator()</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classmacierz.html#a2bfc15fe78f73d7721547d4224751b74">   20</a></span>&#160;    <a class="code" href="classmacierz.html#a2bfc15fe78f73d7721547d4224751b74">macierz</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> m);</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classmacierz.html#abbbdb62425ef0666cf083bb927793264">   23</a></span>&#160;    <a class="code" href="classmacierz.html#abbbdb62425ef0666cf083bb927793264">macierz</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classmacierz.html#adf52dc18b07161fac8af2e253f03b895">   28</a></span>&#160;    <a class="code" href="classmacierz.html#adf52dc18b07161fac8af2e253f03b895">macierz</a>(std::string sciezka, <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> m);</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classmacierz.html#a66581bff2fdf0c19496b519840506e13">   30</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classmacierz.html#a66581bff2fdf0c19496b519840506e13">druk</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classmacierz.html#a28708b2abfbedc59c8fc893a715a6069">   33</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classmacierz.html#a28708b2abfbedc59c8fc893a715a6069">druk</a>(std::string sciezka);</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classmacierz.html#a62115995c782632328f8db6af2c6dd9c">   39</a></span>&#160;    <a class="code" href="classmacierz.html">macierz</a> <a class="code" href="classmacierz.html#a62115995c782632328f8db6af2c6dd9c">minor</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classmacierz.html#a6f8b4d6b66c7e1b548914ece90e0dcf6">   42</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classmacierz.html#a6f8b4d6b66c7e1b548914ece90e0dcf6">transpozycja</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classmacierz.html#a0ea91d2a5db046eab7d86cdf11f587c1">   46</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classmacierz.html#a0ea91d2a5db046eab7d86cdf11f587c1">przesun_wiersz</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> ilosc);</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classmacierz.html#a45d1cb6b20de225ec25bb5c8e32506f7">   50</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classmacierz.html#a45d1cb6b20de225ec25bb5c8e32506f7">przesun_kolumne</a>(<span class="keywordtype">int</span> y, <span class="keywordtype">int</span> ilosc);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassmacierz_html"><div class="ttname"><a href="classmacierz.html">macierz</a></div><div class="ttdoc">Implementacja dynamicznej tablicy dwuwymiarowej.</div><div class="ttdef"><b>Definition:</b> macierz.h:9</div></div>
+<div class="ttc" id="aclassmacierz_html_a0ea91d2a5db046eab7d86cdf11f587c1"><div class="ttname"><a href="classmacierz.html#a0ea91d2a5db046eab7d86cdf11f587c1">macierz::przesun_wiersz</a></div><div class="ttdeci">void przesun_wiersz(int x, int ilosc)</div><div class="ttdoc">Dokonuje przesunięcia cyklicznego wiersza macierzy.</div></div>
+<div class="ttc" id="aclassmacierz_html_a28708b2abfbedc59c8fc893a715a6069"><div class="ttname"><a href="classmacierz.html#a28708b2abfbedc59c8fc893a715a6069">macierz::druk</a></div><div class="ttdeci">void druk(std::string sciezka)</div><div class="ttdoc">Zapisuje zawartość macierzy do pliku.</div></div>
+<div class="ttc" id="aclassmacierz_html_a2bfc15fe78f73d7721547d4224751b74"><div class="ttname"><a href="classmacierz.html#a2bfc15fe78f73d7721547d4224751b74">macierz::macierz</a></div><div class="ttdeci">macierz(int n, int m)</div><div class="ttdoc">Tworzy pustą macierz o wymiarach n x m.</div></div>
+<div class="ttc" id="aclassmacierz_html_a45d1cb6b20de225ec25bb5c8e32506f7"><div class="ttname"><a href="classmacierz.html#a45d1cb6b20de225ec25bb5c8e32506f7">macierz::przesun_kolumne</a></div><div class="ttdeci">void przesun_kolumne(int y, int ilosc)</div><div class="ttdoc">Dokonuje przesunięcia cyklicznego kolumny macierzy.</div></div>
+<div class="ttc" id="aclassmacierz_html_a62115995c782632328f8db6af2c6dd9c"><div class="ttname"><a href="classmacierz.html#a62115995c782632328f8db6af2c6dd9c">macierz::minor</a></div><div class="ttdeci">macierz minor(int x, int y)</div><div class="ttdoc">Tworzy kopię macierzy z wykreślonym rzędem x i kolumną y.</div></div>
+<div class="ttc" id="aclassmacierz_html_a66581bff2fdf0c19496b519840506e13"><div class="ttname"><a href="classmacierz.html#a66581bff2fdf0c19496b519840506e13">macierz::druk</a></div><div class="ttdeci">void druk()</div><div class="ttdoc">Wypisuje zawartość macierzy do konsoli.</div></div>
+<div class="ttc" id="aclassmacierz_html_a6f8b4d6b66c7e1b548914ece90e0dcf6"><div class="ttname"><a href="classmacierz.html#a6f8b4d6b66c7e1b548914ece90e0dcf6">macierz::transpozycja</a></div><div class="ttdeci">void transpozycja()</div><div class="ttdoc">Dokonuje transpozycji macierzy.</div></div>
+<div class="ttc" id="aclassmacierz_html_abbbdb62425ef0666cf083bb927793264"><div class="ttname"><a href="classmacierz.html#abbbdb62425ef0666cf083bb927793264">macierz::macierz</a></div><div class="ttdeci">macierz(int n)</div><div class="ttdoc">Tworzy pustą kwadratową macierz o wymiarach n x n.</div></div>
+<div class="ttc" id="aclassmacierz_html_ad1411b107c2360089b2950f76f261aed"><div class="ttname"><a href="classmacierz.html#ad1411b107c2360089b2950f76f261aed">macierz::operator()</a></div><div class="ttdeci">T &amp; operator()(int x, int y)</div><div class="ttdoc">Umożliwia dostęp do wybranej komórki macierzy.</div><div class="ttdef"><b>Definition:</b> macierz.cpp:8</div></div>
+<div class="ttc" id="aclassmacierz_html_adf52dc18b07161fac8af2e253f03b895"><div class="ttname"><a href="classmacierz.html#adf52dc18b07161fac8af2e253f03b895">macierz::macierz</a></div><div class="ttdeci">macierz(std::string sciezka, int n, int m)</div><div class="ttdoc">Tworzy macierz o wymiarach n x m oraz wypełnia ją danymi z pliku.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>macierz.h</b></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

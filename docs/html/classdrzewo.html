@@ -103,16 +103,58 @@ $(document).ready(function(){initNavTree('classdrzewo.html',''); initResizable()
 <p>Implementacja binarnego drzewa poszukiwań.  
  <a href="classdrzewo.html#details">Więcej...</a></p>
 
-<p><code>#include &lt;<a class="el" href="drzewo_8h_source.html">drzewo.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="src_2drzewo_8h_source.html">drzewo.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:a249d7d50154b84eef0dfc13e26917b8d"><td class="memItemLeft" align="right" valign="top"><a id="a249d7d50154b84eef0dfc13e26917b8d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a249d7d50154b84eef0dfc13e26917b8d">drzewo</a> ()</td></tr>
-<tr class="memdesc:a249d7d50154b84eef0dfc13e26917b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy pustą drzewo. <br /></td></tr>
+<tr class="memdesc:a249d7d50154b84eef0dfc13e26917b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy puste drzewo. <br /></td></tr>
 <tr class="separator:a249d7d50154b84eef0dfc13e26917b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95454a04236b401e849afa4e3168d072"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a95454a04236b401e849afa4e3168d072">drzewo</a> (std::string sciezka)</td></tr>
-<tr class="memdesc:a95454a04236b401e849afa4e3168d072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy pustą drzewo i wypełnia je elementami o danych z pliku.  <a href="classdrzewo.html#a95454a04236b401e849afa4e3168d072">Więcej...</a><br /></td></tr>
+<tr class="memdesc:a95454a04236b401e849afa4e3168d072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy puste drzewo i wypełnia je elementami o danych z pliku.  <a href="classdrzewo.html#a95454a04236b401e849afa4e3168d072">Więcej...</a><br /></td></tr>
+<tr class="separator:a95454a04236b401e849afa4e3168d072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449272a511e38f5daf852492b8224801"><td class="memItemLeft" align="right" valign="top"><a id="a449272a511e38f5daf852492b8224801"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a449272a511e38f5daf852492b8224801">druk_drzewo</a> ()</td></tr>
+<tr class="memdesc:a449272a511e38f5daf852492b8224801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wypisuje zawartość drzewa do konsoli, zachowując jego strukturę. <br /></td></tr>
+<tr class="separator:a449272a511e38f5daf852492b8224801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04a2e1695d1b982864ac9c07f7af4d3a"><td class="memItemLeft" align="right" valign="top"><a id="a04a2e1695d1b982864ac9c07f7af4d3a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a04a2e1695d1b982864ac9c07f7af4d3a">druk_inorder</a> ()</td></tr>
+<tr class="memdesc:a04a2e1695d1b982864ac9c07f7af4d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wypisuje zawartość drzewa posortowaną rosnąco. <br /></td></tr>
+<tr class="separator:a04a2e1695d1b982864ac9c07f7af4d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7072a9b9a2c07ba414ee3355ea5e20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a0b7072a9b9a2c07ba414ee3355ea5e20">druk_inorder</a> (std::string sciezka)</td></tr>
+<tr class="memdesc:a0b7072a9b9a2c07ba414ee3355ea5e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zapisuje zawartość drzewa posortowaną rosnąco do pliku.  <a href="classdrzewo.html#a0b7072a9b9a2c07ba414ee3355ea5e20">Więcej...</a><br /></td></tr>
+<tr class="separator:a0b7072a9b9a2c07ba414ee3355ea5e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029aae9f7e3e48302c15467bf1806253"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a029aae9f7e3e48302c15467bf1806253">dodaj</a> (T dane)</td></tr>
+<tr class="memdesc:a029aae9f7e3e48302c15467bf1806253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje nowy element zgodnie z zasadami binarnego drzewa poszukiwań.  <a href="classdrzewo.html#a029aae9f7e3e48302c15467bf1806253">Więcej...</a><br /></td></tr>
+<tr class="separator:a029aae9f7e3e48302c15467bf1806253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ed2972ce245f82f67bfbcd2852ddc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a41ed2972ce245f82f67bfbcd2852ddc1">usun</a> (T dane)</td></tr>
+<tr class="memdesc:a41ed2972ce245f82f67bfbcd2852ddc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usuwa element drzewa o danej wartości.  <a href="classdrzewo.html#a41ed2972ce245f82f67bfbcd2852ddc1">Więcej...</a><br /></td></tr>
+<tr class="separator:a41ed2972ce245f82f67bfbcd2852ddc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc97e4413413662fac7f503d400b8a59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#abc97e4413413662fac7f503d400b8a59">wysokosc</a> (T dane)</td></tr>
+<tr class="memdesc:abc97e4413413662fac7f503d400b8a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Znajduje wysokość poddrzewa zaczynającego się danym elementem.  <a href="classdrzewo.html#abc97e4413413662fac7f503d400b8a59">Więcej...</a><br /></td></tr>
+<tr class="separator:abc97e4413413662fac7f503d400b8a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdeb12d8f721bba98a503dd8fd4452c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#acdeb12d8f721bba98a503dd8fd4452c7">wysokosc</a> ()</td></tr>
+<tr class="memdesc:acdeb12d8f721bba98a503dd8fd4452c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Znajduje wysokość całego drzewa.  <a href="classdrzewo.html#acdeb12d8f721bba98a503dd8fd4452c7">Więcej...</a><br /></td></tr>
+<tr class="separator:acdeb12d8f721bba98a503dd8fd4452c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab29f558e03a38f6f284e92f827b2385f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#ab29f558e03a38f6f284e92f827b2385f">wielkosc</a> (T dane)</td></tr>
+<tr class="memdesc:ab29f558e03a38f6f284e92f827b2385f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Znajduje wielkość poddrzewa zaczynającego się danym elementem.  <a href="classdrzewo.html#ab29f558e03a38f6f284e92f827b2385f">Więcej...</a><br /></td></tr>
+<tr class="separator:ab29f558e03a38f6f284e92f827b2385f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade447cc7594ef51ad187ec62bf59dfad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#ade447cc7594ef51ad187ec62bf59dfad">wielkosc</a> ()</td></tr>
+<tr class="memdesc:ade447cc7594ef51ad187ec62bf59dfad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Znajduje wielkość całego drzewa.  <a href="classdrzewo.html#ade447cc7594ef51ad187ec62bf59dfad">Więcej...</a><br /></td></tr>
+<tr class="separator:ade447cc7594ef51ad187ec62bf59dfad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a525e662badc40b12d779999ac1a1ed0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a525e662badc40b12d779999ac1a1ed0d">obrot_prawo</a> (T dane)</td></tr>
+<tr class="memdesc:a525e662badc40b12d779999ac1a1ed0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wykonuje obrót w prawo drzewa względem danego elementu.  <a href="classdrzewo.html#a525e662badc40b12d779999ac1a1ed0d">Więcej...</a><br /></td></tr>
+<tr class="separator:a525e662badc40b12d779999ac1a1ed0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af42c1749d99b6ecf84701c0d70f314"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a4af42c1749d99b6ecf84701c0d70f314">obrot_lewo</a> (T dane)</td></tr>
+<tr class="memdesc:a4af42c1749d99b6ecf84701c0d70f314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wykonuje obrót w lewo drzewa względem danego elementu.  <a href="classdrzewo.html#a4af42c1749d99b6ecf84701c0d70f314">Więcej...</a><br /></td></tr>
+<tr class="separator:a4af42c1749d99b6ecf84701c0d70f314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249d7d50154b84eef0dfc13e26917b8d"><td class="memItemLeft" align="right" valign="top"><a id="a249d7d50154b84eef0dfc13e26917b8d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a249d7d50154b84eef0dfc13e26917b8d">drzewo</a> ()</td></tr>
+<tr class="memdesc:a249d7d50154b84eef0dfc13e26917b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy puste drzewo. <br /></td></tr>
+<tr class="separator:a249d7d50154b84eef0dfc13e26917b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95454a04236b401e849afa4e3168d072"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a95454a04236b401e849afa4e3168d072">drzewo</a> (std::string sciezka)</td></tr>
+<tr class="memdesc:a95454a04236b401e849afa4e3168d072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy puste drzewo i wypełnia je elementami o danych z pliku.  <a href="classdrzewo.html#a95454a04236b401e849afa4e3168d072">Więcej...</a><br /></td></tr>
 <tr class="separator:a95454a04236b401e849afa4e3168d072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a449272a511e38f5daf852492b8224801"><td class="memItemLeft" align="right" valign="top"><a id="a449272a511e38f5daf852492b8224801"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a449272a511e38f5daf852492b8224801">druk_drzewo</a> ()</td></tr>
@@ -131,16 +173,34 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a41ed2972ce245f82f67bfbcd2852ddc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a41ed2972ce245f82f67bfbcd2852ddc1">usun</a> (T dane)</td></tr>
 <tr class="memdesc:a41ed2972ce245f82f67bfbcd2852ddc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usuwa element drzewa o danej wartości.  <a href="classdrzewo.html#a41ed2972ce245f82f67bfbcd2852ddc1">Więcej...</a><br /></td></tr>
 <tr class="separator:a41ed2972ce245f82f67bfbcd2852ddc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc97e4413413662fac7f503d400b8a59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#abc97e4413413662fac7f503d400b8a59">wysokosc</a> (T dane)</td></tr>
+<tr class="memdesc:abc97e4413413662fac7f503d400b8a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Znajduje wysokość poddrzewa danego elementu.  <a href="classdrzewo.html#abc97e4413413662fac7f503d400b8a59">Więcej...</a><br /></td></tr>
+<tr class="separator:abc97e4413413662fac7f503d400b8a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdeb12d8f721bba98a503dd8fd4452c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#acdeb12d8f721bba98a503dd8fd4452c7">wysokosc</a> ()</td></tr>
+<tr class="memdesc:acdeb12d8f721bba98a503dd8fd4452c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Znajduje wysokość drzewa.  <a href="classdrzewo.html#acdeb12d8f721bba98a503dd8fd4452c7">Więcej...</a><br /></td></tr>
+<tr class="separator:acdeb12d8f721bba98a503dd8fd4452c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab29f558e03a38f6f284e92f827b2385f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#ab29f558e03a38f6f284e92f827b2385f">wielkosc</a> (T dane)</td></tr>
+<tr class="memdesc:ab29f558e03a38f6f284e92f827b2385f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Znajduje wielkość poddrzewa danego elementu.  <a href="classdrzewo.html#ab29f558e03a38f6f284e92f827b2385f">Więcej...</a><br /></td></tr>
+<tr class="separator:ab29f558e03a38f6f284e92f827b2385f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade447cc7594ef51ad187ec62bf59dfad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#ade447cc7594ef51ad187ec62bf59dfad">wielkosc</a> ()</td></tr>
+<tr class="memdesc:ade447cc7594ef51ad187ec62bf59dfad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Znajduje wielkość drzewa.  <a href="classdrzewo.html#ade447cc7594ef51ad187ec62bf59dfad">Więcej...</a><br /></td></tr>
+<tr class="separator:ade447cc7594ef51ad187ec62bf59dfad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a525e662badc40b12d779999ac1a1ed0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a525e662badc40b12d779999ac1a1ed0d">obrot_prawo</a> (T dane)</td></tr>
+<tr class="memdesc:a525e662badc40b12d779999ac1a1ed0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wykonuje obrót w prawo drzewa względem danego elementu.  <a href="classdrzewo.html#a525e662badc40b12d779999ac1a1ed0d">Więcej...</a><br /></td></tr>
+<tr class="separator:a525e662badc40b12d779999ac1a1ed0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af42c1749d99b6ecf84701c0d70f314"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrzewo.html#a4af42c1749d99b6ecf84701c0d70f314">obrot_lewo</a> (T dane)</td></tr>
+<tr class="memdesc:a4af42c1749d99b6ecf84701c0d70f314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wykonuje obrót w lewo drzewa względem danego elementu.  <a href="classdrzewo.html#a4af42c1749d99b6ecf84701c0d70f314">Więcej...</a><br /></td></tr>
+<tr class="separator:a4af42c1749d99b6ecf84701c0d70f314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br />
 class drzewo&lt; T &gt;</h3>
 
 <p>Implementacja binarnego drzewa poszukiwań. </p>
-<p>Standardowa dynamiczna struktura danych, alokacja i dealokacja pamięci przebiegają automatycznie. Hierarchia elementów jest automatycznie zachowywana. </p>
+<p>Standardowa dynamiczna struktura danych, alokacja i dealokacja pamięci przebiegają automatycznie. Hierarchia elementów jest automatycznie zachowywana. Implementacja wyważania rozmiaru lub wysokości drzewa ułatwiona dzięki gotowym metodom @ </p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="a95454a04236b401e849afa4e3168d072"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95454a04236b401e849afa4e3168d072">&#9670;&nbsp;</a></span>drzewo()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a95454a04236b401e849afa4e3168d072">&#9670;&nbsp;</a></span>drzewo() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +217,35 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Tworzy pustą drzewo i wypełnia je elementami o danych z pliku. </p>
+<p>Tworzy puste drzewo i wypełnia je elementami o danych z pliku. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sciezka</td><td>Lokalizacja pliku. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a95454a04236b401e849afa4e3168d072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95454a04236b401e849afa4e3168d072">&#9670;&nbsp;</a></span>drzewo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::<a class="el" href="classdrzewo.html">drzewo</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>sciezka</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tworzy puste drzewo i wypełnia je elementami o danych z pliku. </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">sciezka</td><td>Lokalizacja pliku. </td></tr>
@@ -169,7 +257,7 @@ template&lt;class T &gt; </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
 <a id="a029aae9f7e3e48302c15467bf1806253"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a029aae9f7e3e48302c15467bf1806253">&#9670;&nbsp;</a></span>dodaj()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a029aae9f7e3e48302c15467bf1806253">&#9670;&nbsp;</a></span>dodaj() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,8 +284,36 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a029aae9f7e3e48302c15467bf1806253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a029aae9f7e3e48302c15467bf1806253">&#9670;&nbsp;</a></span>dodaj() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::dodaj </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>dane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodaje nowy element zgodnie z zasadami binarnego drzewa poszukiwań. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dane</td><td>Wartość dodawanego elementu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a0b7072a9b9a2c07ba414ee3355ea5e20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b7072a9b9a2c07ba414ee3355ea5e20">&#9670;&nbsp;</a></span>druk_inorder()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7072a9b9a2c07ba414ee3355ea5e20">&#9670;&nbsp;</a></span>druk_inorder() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,8 +340,148 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a0b7072a9b9a2c07ba414ee3355ea5e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7072a9b9a2c07ba414ee3355ea5e20">&#9670;&nbsp;</a></span>druk_inorder() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::druk_inorder </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>sciezka</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zapisuje zawartość drzewa posortowaną rosnąco do pliku. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sciezka</td><td>Lokalizacja pliku. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4af42c1749d99b6ecf84701c0d70f314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af42c1749d99b6ecf84701c0d70f314">&#9670;&nbsp;</a></span>obrot_lewo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::obrot_lewo </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>dane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wykonuje obrót w lewo drzewa względem danego elementu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dane</td><td>Wartość obracanego elementu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4af42c1749d99b6ecf84701c0d70f314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af42c1749d99b6ecf84701c0d70f314">&#9670;&nbsp;</a></span>obrot_lewo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::obrot_lewo </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>dane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wykonuje obrót w lewo drzewa względem danego elementu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dane</td><td>Wartość obracanego elementu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a525e662badc40b12d779999ac1a1ed0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a525e662badc40b12d779999ac1a1ed0d">&#9670;&nbsp;</a></span>obrot_prawo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::obrot_prawo </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>dane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wykonuje obrót w prawo drzewa względem danego elementu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dane</td><td>Wartość obracanego elementu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a525e662badc40b12d779999ac1a1ed0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a525e662badc40b12d779999ac1a1ed0d">&#9670;&nbsp;</a></span>obrot_prawo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::obrot_prawo </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>dane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wykonuje obrót w prawo drzewa względem danego elementu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dane</td><td>Wartość obracanego elementu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a41ed2972ce245f82f67bfbcd2852ddc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41ed2972ce245f82f67bfbcd2852ddc1">&#9670;&nbsp;</a></span>usun()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ed2972ce245f82f67bfbcd2852ddc1">&#9670;&nbsp;</a></span>usun() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +505,232 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Ostrzeżenie</dt><dd>Jeszcze nie obsługiwane! </dd></dl>
+
+</div>
+</div>
+<a id="a41ed2972ce245f82f67bfbcd2852ddc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ed2972ce245f82f67bfbcd2852ddc1">&#9670;&nbsp;</a></span>usun() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::usun </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>dane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Usuwa element drzewa o danej wartości. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dane</td><td>Wartość szukanego elementu do usunięcia. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ade447cc7594ef51ad187ec62bf59dfad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade447cc7594ef51ad187ec62bf59dfad">&#9670;&nbsp;</a></span>wielkosc() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::wielkosc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Znajduje wielkość drzewa. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Wielkość drzewa. </dd></dl>
+
+</div>
+</div>
+<a id="ade447cc7594ef51ad187ec62bf59dfad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade447cc7594ef51ad187ec62bf59dfad">&#9670;&nbsp;</a></span>wielkosc() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::wielkosc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Znajduje wielkość całego drzewa. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Wielkość całego drzewa. </dd></dl>
+
+</div>
+</div>
+<a id="ab29f558e03a38f6f284e92f827b2385f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab29f558e03a38f6f284e92f827b2385f">&#9670;&nbsp;</a></span>wielkosc() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::wielkosc </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>dane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Znajduje wielkość poddrzewa danego elementu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dane</td><td>Wartość elementu o szukanej wielkości. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Wielkość poddrzewa. </dd></dl>
+
+</div>
+</div>
+<a id="ab29f558e03a38f6f284e92f827b2385f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab29f558e03a38f6f284e92f827b2385f">&#9670;&nbsp;</a></span>wielkosc() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::wielkosc </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>dane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Znajduje wielkość poddrzewa zaczynającego się danym elementem. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dane</td><td>Pierwszy element poddrzewa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Wielkość poddrzewa. </dd></dl>
+
+</div>
+</div>
+<a id="acdeb12d8f721bba98a503dd8fd4452c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdeb12d8f721bba98a503dd8fd4452c7">&#9670;&nbsp;</a></span>wysokosc() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::wysokosc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Znajduje wysokość drzewa. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Wysokość drzewa. </dd></dl>
+
+</div>
+</div>
+<a id="acdeb12d8f721bba98a503dd8fd4452c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdeb12d8f721bba98a503dd8fd4452c7">&#9670;&nbsp;</a></span>wysokosc() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::wysokosc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Znajduje wysokość całego drzewa. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Wysokość całego drzewa. </dd></dl>
+
+</div>
+</div>
+<a id="abc97e4413413662fac7f503d400b8a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc97e4413413662fac7f503d400b8a59">&#9670;&nbsp;</a></span>wysokosc() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::wysokosc </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>dane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Znajduje wysokość poddrzewa danego elementu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dane</td><td>Wartość elementu o szukanej wysokości. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Wysokość poddrzewa. </dd></dl>
+
+</div>
+</div>
+<a id="abc97e4413413662fac7f503d400b8a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc97e4413413662fac7f503d400b8a59">&#9670;&nbsp;</a></span>wysokosc() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classdrzewo.html">drzewo</a>&lt; T &gt;::wysokosc </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>dane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Znajduje wysokość poddrzewa zaczynającego się danym elementem. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dane</td><td>Pierwszy element poddrzewa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Wysokość poddrzewa. </dd></dl>
 
 </div>
 </div>

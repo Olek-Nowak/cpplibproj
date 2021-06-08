@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['usun_28',['usun',['../classdrzewo.html#a41ed2972ce245f82f67bfbcd2852ddc1',1,'drzewo::usun()'],['../classlista__1kier.html#aadfcdc313323f5da0da317db7b6d90f6',1,'lista_1kier::usun()'],['../classlista__1kier.html#ab9d4c4ddae9e6df7d2e787c90207bb86',1,'lista_1kier::usun(int pozycja)']]],
-  ['usun_5fnapotkany_29',['usun_napotkany',['../classlista__1kier.html#adb12d76f242ef7b2e8ee335eaf3674a5',1,'lista_1kier']]]
+  ['podglad_47',['podglad',['../classkolejka.html#a7408a3cb8eddd2332961f77636fd456a',1,'kolejka::podglad(T &amp;dane)'],['../classkolejka.html#a7408a3cb8eddd2332961f77636fd456a',1,'kolejka::podglad(T &amp;dane)']]],
+  ['przesun_5fkolumne_48',['przesun_kolumne',['../classmacierz.html#a45d1cb6b20de225ec25bb5c8e32506f7',1,'macierz::przesun_kolumne(int y, int ilosc)'],['../classmacierz.html#a45d1cb6b20de225ec25bb5c8e32506f7',1,'macierz::przesun_kolumne(int y, int ilosc)']]],
+  ['przesun_5fwiersz_49',['przesun_wiersz',['../classmacierz.html#a0ea91d2a5db046eab7d86cdf11f587c1',1,'macierz::przesun_wiersz(int x, int ilosc)'],['../classmacierz.html#a0ea91d2a5db046eab7d86cdf11f587c1',1,'macierz::przesun_wiersz(int x, int ilosc)']]]
 ];

@@ -25,7 +25,10 @@
 var NAVTREE =
 [
   [ "cpplibproj", "index.html", [
-    [ "cpplibproj - demo", "index.html", null ],
+    [ "cpplibproj - demo", "index.html", [
+      [ "Wstęp - kompilacja", "index.html#autotoc_md0", null ],
+      [ "Przykład użycia - dodawanie macierzy", "index.html#autotoc_md2", null ]
+    ] ],
     [ "Klasy", "annotated.html", [
       [ "Lista klas", "annotated.html", "annotated_dup" ],
       [ "Indeks klas", "classes.html", null ],

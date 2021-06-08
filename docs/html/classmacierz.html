@@ -103,10 +103,13 @@ $(document).ready(function(){initNavTree('classmacierz.html',''); initResizable(
 <p>Implementacja dynamicznej tablicy dwuwymiarowej.  
  <a href="classmacierz.html#details">Więcej...</a></p>
 
-<p><code>#include &lt;<a class="el" href="macierz_8h_source.html">macierz.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="src_2macierz_8h_source.html">macierz.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
+<tr class="memitem:ad1411b107c2360089b2950f76f261aed"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#ad1411b107c2360089b2950f76f261aed">operator()</a> (int x, int y)</td></tr>
+<tr class="memdesc:ad1411b107c2360089b2950f76f261aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Umożliwia dostęp do wybranej komórki macierzy.  <a href="classmacierz.html#ad1411b107c2360089b2950f76f261aed">Więcej...</a><br /></td></tr>
+<tr class="separator:ad1411b107c2360089b2950f76f261aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bfc15fe78f73d7721547d4224751b74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#a2bfc15fe78f73d7721547d4224751b74">macierz</a> (int n, int m)</td></tr>
 <tr class="memdesc:a2bfc15fe78f73d7721547d4224751b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy pustą macierz o wymiarach n x m.  <a href="classmacierz.html#a2bfc15fe78f73d7721547d4224751b74">Więcej...</a><br /></td></tr>
 <tr class="separator:a2bfc15fe78f73d7721547d4224751b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +138,34 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a45d1cb6b20de225ec25bb5c8e32506f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#a45d1cb6b20de225ec25bb5c8e32506f7">przesun_kolumne</a> (int y, int ilosc)</td></tr>
 <tr class="memdesc:a45d1cb6b20de225ec25bb5c8e32506f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dokonuje przesunięcia cyklicznego kolumny macierzy.  <a href="classmacierz.html#a45d1cb6b20de225ec25bb5c8e32506f7">Więcej...</a><br /></td></tr>
 <tr class="separator:a45d1cb6b20de225ec25bb5c8e32506f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bfc15fe78f73d7721547d4224751b74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#a2bfc15fe78f73d7721547d4224751b74">macierz</a> (int n, int m)</td></tr>
+<tr class="memdesc:a2bfc15fe78f73d7721547d4224751b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy pustą macierz o wymiarach n x m.  <a href="classmacierz.html#a2bfc15fe78f73d7721547d4224751b74">Więcej...</a><br /></td></tr>
+<tr class="separator:a2bfc15fe78f73d7721547d4224751b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbbdb62425ef0666cf083bb927793264"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#abbbdb62425ef0666cf083bb927793264">macierz</a> (int n)</td></tr>
+<tr class="memdesc:abbbdb62425ef0666cf083bb927793264"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy pustą kwadratową macierz o wymiarach n x n.  <a href="classmacierz.html#abbbdb62425ef0666cf083bb927793264">Więcej...</a><br /></td></tr>
+<tr class="separator:abbbdb62425ef0666cf083bb927793264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf52dc18b07161fac8af2e253f03b895"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#adf52dc18b07161fac8af2e253f03b895">macierz</a> (std::string sciezka, int n, int m)</td></tr>
+<tr class="memdesc:adf52dc18b07161fac8af2e253f03b895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy macierz o wymiarach n x m oraz wypełnia ją danymi z pliku.  <a href="classmacierz.html#adf52dc18b07161fac8af2e253f03b895">Więcej...</a><br /></td></tr>
+<tr class="separator:adf52dc18b07161fac8af2e253f03b895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66581bff2fdf0c19496b519840506e13"><td class="memItemLeft" align="right" valign="top"><a id="a66581bff2fdf0c19496b519840506e13"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#a66581bff2fdf0c19496b519840506e13">druk</a> ()</td></tr>
+<tr class="memdesc:a66581bff2fdf0c19496b519840506e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wypisuje zawartość macierzy do konsoli. <br /></td></tr>
+<tr class="separator:a66581bff2fdf0c19496b519840506e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28708b2abfbedc59c8fc893a715a6069"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#a28708b2abfbedc59c8fc893a715a6069">druk</a> (std::string sciezka)</td></tr>
+<tr class="memdesc:a28708b2abfbedc59c8fc893a715a6069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zapisuje zawartość macierzy do pliku.  <a href="classmacierz.html#a28708b2abfbedc59c8fc893a715a6069">Więcej...</a><br /></td></tr>
+<tr class="separator:a28708b2abfbedc59c8fc893a715a6069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62115995c782632328f8db6af2c6dd9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmacierz.html">macierz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#a62115995c782632328f8db6af2c6dd9c">minor</a> (int x, int y)</td></tr>
+<tr class="memdesc:a62115995c782632328f8db6af2c6dd9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy kopię macierzy z wykreślonym rzędem x i kolumną y.  <a href="classmacierz.html#a62115995c782632328f8db6af2c6dd9c">Więcej...</a><br /></td></tr>
+<tr class="separator:a62115995c782632328f8db6af2c6dd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f8b4d6b66c7e1b548914ece90e0dcf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#a6f8b4d6b66c7e1b548914ece90e0dcf6">transpozycja</a> ()</td></tr>
+<tr class="memdesc:a6f8b4d6b66c7e1b548914ece90e0dcf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dokonuje transpozycji macierzy.  <a href="classmacierz.html#a6f8b4d6b66c7e1b548914ece90e0dcf6">Więcej...</a><br /></td></tr>
+<tr class="separator:a6f8b4d6b66c7e1b548914ece90e0dcf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea91d2a5db046eab7d86cdf11f587c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#a0ea91d2a5db046eab7d86cdf11f587c1">przesun_wiersz</a> (int x, int ilosc)</td></tr>
+<tr class="memdesc:a0ea91d2a5db046eab7d86cdf11f587c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dokonuje przesunięcia cyklicznego wiersza macierzy.  <a href="classmacierz.html#a0ea91d2a5db046eab7d86cdf11f587c1">Więcej...</a><br /></td></tr>
+<tr class="separator:a0ea91d2a5db046eab7d86cdf11f587c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d1cb6b20de225ec25bb5c8e32506f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz.html#a45d1cb6b20de225ec25bb5c8e32506f7">przesun_kolumne</a> (int y, int ilosc)</td></tr>
+<tr class="memdesc:a45d1cb6b20de225ec25bb5c8e32506f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dokonuje przesunięcia cyklicznego kolumny macierzy.  <a href="classmacierz.html#a45d1cb6b20de225ec25bb5c8e32506f7">Więcej...</a><br /></td></tr>
+<tr class="separator:a45d1cb6b20de225ec25bb5c8e32506f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br />
@@ -144,7 +175,7 @@ class macierz&lt; T &gt;</h3>
 <p>Standardowa dynamiczna struktura danych, alokacja i dealokacja pamięci przebiegają automatycznie. Przeciążony operator () pozwala na dostęp do poszczególnych pól macierzy. </p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="a2bfc15fe78f73d7721547d4224751b74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bfc15fe78f73d7721547d4224751b74">&#9670;&nbsp;</a></span>macierz() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bfc15fe78f73d7721547d4224751b74">&#9670;&nbsp;</a></span>macierz() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,7 +214,7 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <a id="abbbdb62425ef0666cf083bb927793264"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbbdb62425ef0666cf083bb927793264">&#9670;&nbsp;</a></span>macierz() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abbbdb62425ef0666cf083bb927793264">&#9670;&nbsp;</a></span>macierz() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -211,7 +242,120 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <a id="adf52dc18b07161fac8af2e253f03b895"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf52dc18b07161fac8af2e253f03b895">&#9670;&nbsp;</a></span>macierz() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adf52dc18b07161fac8af2e253f03b895">&#9670;&nbsp;</a></span>macierz() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmacierz.html">macierz</a>&lt; T &gt;::<a class="el" href="classmacierz.html">macierz</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>sciezka</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tworzy macierz o wymiarach n x m oraz wypełnia ją danymi z pliku. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sciezka</td><td>Lokalizacja pliku. </td></tr>
+    <tr><td class="paramname">n</td><td>Ilość wierszy macierzy. </td></tr>
+    <tr><td class="paramname">m</td><td>Ilość kolumn macierzy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2bfc15fe78f73d7721547d4224751b74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bfc15fe78f73d7721547d4224751b74">&#9670;&nbsp;</a></span>macierz() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmacierz.html">macierz</a>&lt; T &gt;::<a class="el" href="classmacierz.html">macierz</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tworzy pustą macierz o wymiarach n x m. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Ilość wierszy macierzy. </td></tr>
+    <tr><td class="paramname">m</td><td>Ilość kolumn macierzy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abbbdb62425ef0666cf083bb927793264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbbdb62425ef0666cf083bb927793264">&#9670;&nbsp;</a></span>macierz() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmacierz.html">macierz</a>&lt; T &gt;::<a class="el" href="classmacierz.html">macierz</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tworzy pustą kwadratową macierz o wymiarach n x n. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Ilość wierszy i kolumn macierzy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adf52dc18b07161fac8af2e253f03b895"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf52dc18b07161fac8af2e253f03b895">&#9670;&nbsp;</a></span>macierz() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,7 +402,7 @@ template&lt;class T &gt; </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
 <a id="a28708b2abfbedc59c8fc893a715a6069"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28708b2abfbedc59c8fc893a715a6069">&#9670;&nbsp;</a></span>druk()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a28708b2abfbedc59c8fc893a715a6069">&#9670;&nbsp;</a></span>druk() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -285,8 +429,77 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a28708b2abfbedc59c8fc893a715a6069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28708b2abfbedc59c8fc893a715a6069">&#9670;&nbsp;</a></span>druk() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmacierz.html">macierz</a>&lt; T &gt;::druk </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>sciezka</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zapisuje zawartość macierzy do pliku. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sciezka</td><td>Lokalizacja pliku. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a62115995c782632328f8db6af2c6dd9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62115995c782632328f8db6af2c6dd9c">&#9670;&nbsp;</a></span>minor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmacierz.html">macierz</a> <a class="el" href="classmacierz.html">macierz</a>&lt; T &gt;::minor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tworzy kopię macierzy z wykreślonym rzędem x i kolumną y. </p>
+<dl class="section warning"><dt>Ostrzeżenie</dt><dd>Jedynie dla macierzy kwadratowej, o wymiarach n x n. </dd></dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Minor macierzy początkowej. </dd></dl>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Numer wiersza do wykreślenia, poczynając od 0. </td></tr>
+    <tr><td class="paramname">y</td><td>Numer kolumny do wykreślenia, poczynając od 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a608b84c15d568c896fc8dc936d770cdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a608b84c15d568c896fc8dc936d770cdf">&#9670;&nbsp;</a></span>minor()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a608b84c15d568c896fc8dc936d770cdf">&#9670;&nbsp;</a></span>minor() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -326,8 +539,87 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="ad1411b107c2360089b2950f76f261aed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1411b107c2360089b2950f76f261aed">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="classmacierz.html">macierz</a>&lt; T &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Umożliwia dostęp do wybranej komórki macierzy. </p>
+<p>Pozwala zarówno na ustawienie, jak i odczytanie wartości komórki. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Numer wiersza macierzy. </td></tr>
+    <tr><td class="paramname">y</td><td>Numer kolumny macierzy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Wartość wybranej komórki. </dd></dl>
+
+</div>
+</div>
 <a id="a45d1cb6b20de225ec25bb5c8e32506f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45d1cb6b20de225ec25bb5c8e32506f7">&#9670;&nbsp;</a></span>przesun_kolumne()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d1cb6b20de225ec25bb5c8e32506f7">&#9670;&nbsp;</a></span>przesun_kolumne() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmacierz.html">macierz</a>&lt; T &gt;::przesun_kolumne </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ilosc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dokonuje przesunięcia cyklicznego kolumny macierzy. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>Numer kolumny do przesunięcia, poczynając od 0. </td></tr>
+    <tr><td class="paramname">ilosc</td><td>Ilość miejsc do przesunięcia, ujemna dla przesunięcia ku górze. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a45d1cb6b20de225ec25bb5c8e32506f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d1cb6b20de225ec25bb5c8e32506f7">&#9670;&nbsp;</a></span>przesun_kolumne() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,7 +658,46 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <a id="a0ea91d2a5db046eab7d86cdf11f587c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ea91d2a5db046eab7d86cdf11f587c1">&#9670;&nbsp;</a></span>przesun_wiersz()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea91d2a5db046eab7d86cdf11f587c1">&#9670;&nbsp;</a></span>przesun_wiersz() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmacierz.html">macierz</a>&lt; T &gt;::przesun_wiersz </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ilosc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dokonuje przesunięcia cyklicznego wiersza macierzy. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Numer wiersza do przesunięcia, poczynając od 0. </td></tr>
+    <tr><td class="paramname">ilosc</td><td>Ilość miejsc do przesunięcia, ujemna dla przesunięcia w lewo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ea91d2a5db046eab7d86cdf11f587c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea91d2a5db046eab7d86cdf11f587c1">&#9670;&nbsp;</a></span>przesun_wiersz() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,7 +736,29 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <a id="a6f8b4d6b66c7e1b548914ece90e0dcf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f8b4d6b66c7e1b548914ece90e0dcf6">&#9670;&nbsp;</a></span>transpozycja()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8b4d6b66c7e1b548914ece90e0dcf6">&#9670;&nbsp;</a></span>transpozycja() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmacierz.html">macierz</a>&lt; T &gt;::transpozycja </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dokonuje transpozycji macierzy. </p>
+<dl class="section warning"><dt>Ostrzeżenie</dt><dd>Jedynie dla macierzy kwadratowej, o wymiarach n x n. </dd></dl>
+
+</div>
+</div>
+<a id="a6f8b4d6b66c7e1b548914ece90e0dcf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8b4d6b66c7e1b548914ece90e0dcf6">&#9670;&nbsp;</a></span>transpozycja() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
