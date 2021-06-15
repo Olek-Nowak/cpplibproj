@@ -111,38 +111,58 @@ $(document).ready(function(){initNavTree('drzewo_8h_source.html',''); initResiza
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> druk_drzewo(<span class="keywordtype">int</span> tab);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> skasuj();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> dodaj(T dane);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> usun(T dane, drzewoElem* poprzedni);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classdrzewo.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdrzewo.html">drzewo</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    drzewoElem&lt;T&gt;* korzen_;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ~<a class="code" href="classdrzewo.html">drzewo</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classdrzewo.html#a249d7d50154b84eef0dfc13e26917b8d">drzewo</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classdrzewo.html#a95454a04236b401e849afa4e3168d072">   34</a></span>&#160;    <a class="code" href="classdrzewo.html#a95454a04236b401e849afa4e3168d072">drzewo</a>(std::string sciezka);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a449272a511e38f5daf852492b8224801">druk_drzewo</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a04a2e1695d1b982864ac9c07f7af4d3a">druk_inorder</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classdrzewo.html#a0b7072a9b9a2c07ba414ee3355ea5e20">   41</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a0b7072a9b9a2c07ba414ee3355ea5e20">druk_inorder</a>(std::string sciezka);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a029aae9f7e3e48302c15467bf1806253">dodaj</a>(T dane);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a41ed2972ce245f82f67bfbcd2852ddc1">usun</a>(T dane);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassdrzewo_html"><div class="ttname"><a href="classdrzewo.html">drzewo</a></div><div class="ttdoc">Implementacja binarnego drzewa poszukiwań.</div><div class="ttdef"><b>Definition:</b> drzewo.h:24</div></div>
-<div class="ttc" id="aclassdrzewo_html_a029aae9f7e3e48302c15467bf1806253"><div class="ttname"><a href="classdrzewo.html#a029aae9f7e3e48302c15467bf1806253">drzewo::dodaj</a></div><div class="ttdeci">void dodaj(T dane)</div><div class="ttdoc">Dodaje nowy element w zgodnie z zasadami binarnego drzewa poszukiwań.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:140</div></div>
-<div class="ttc" id="aclassdrzewo_html_a04a2e1695d1b982864ac9c07f7af4d3a"><div class="ttname"><a href="classdrzewo.html#a04a2e1695d1b982864ac9c07f7af4d3a">drzewo::druk_inorder</a></div><div class="ttdeci">void druk_inorder()</div><div class="ttdoc">Wypisuje zawartość drzewa posortowaną rosnąco.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:127</div></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    drzewoElem&lt;T&gt;* najwiekszy();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    drzewoElem&lt;T&gt;* najmniejszy();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> usun(T dane, drzewoElem* <span class="keyword">const</span> &amp;poprzedni);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    drzewoElem&lt;T&gt;* usun_korzen();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> wysokosc();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> wielkosc();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> obrot_lewo(drzewoElem&lt;T&gt;* <span class="keyword">const</span> &amp;poprzedni);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> obrot_prawo(drzewoElem&lt;T&gt;* <span class="keyword">const</span> &amp;poprzedni);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    drzewoElem&lt;T&gt;* obrot_korzen_lewo();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    drzewoElem&lt;T&gt;* obrot_korzen_prawo();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classdrzewo.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdrzewo.html">drzewo</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    drzewoElem&lt;T&gt;* korzen_;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> puste_;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ~<a class="code" href="classdrzewo.html">drzewo</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classdrzewo.html#a249d7d50154b84eef0dfc13e26917b8d">drzewo</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classdrzewo.html#a95454a04236b401e849afa4e3168d072">   45</a></span>&#160;    <a class="code" href="classdrzewo.html#a95454a04236b401e849afa4e3168d072">drzewo</a>(std::string sciezka);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a449272a511e38f5daf852492b8224801">druk_drzewo</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a04a2e1695d1b982864ac9c07f7af4d3a">druk_inorder</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classdrzewo.html#a0b7072a9b9a2c07ba414ee3355ea5e20">   52</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a0b7072a9b9a2c07ba414ee3355ea5e20">druk_inorder</a>(std::string sciezka);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a029aae9f7e3e48302c15467bf1806253">dodaj</a>(T dane);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a41ed2972ce245f82f67bfbcd2852ddc1">usun</a>(T dane);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classdrzewo.html#acdeb12d8f721bba98a503dd8fd4452c7">wysokosc</a>(T dane);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classdrzewo.html#acdeb12d8f721bba98a503dd8fd4452c7">wysokosc</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classdrzewo.html#ade447cc7594ef51ad187ec62bf59dfad">wielkosc</a>(T dane);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classdrzewo.html#ade447cc7594ef51ad187ec62bf59dfad">wielkosc</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a525e662badc40b12d779999ac1a1ed0d">obrot_prawo</a>(T dane);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdrzewo.html#a4af42c1749d99b6ecf84701c0d70f314">obrot_lewo</a>(T dane);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassdrzewo_html"><div class="ttname"><a href="classdrzewo.html">drzewo</a></div><div class="ttdoc">Implementacja binarnego drzewa poszukiwań.</div><div class="ttdef"><b>Definition:</b> drzewo.h:34</div></div>
+<div class="ttc" id="aclassdrzewo_html_a029aae9f7e3e48302c15467bf1806253"><div class="ttname"><a href="classdrzewo.html#a029aae9f7e3e48302c15467bf1806253">drzewo::dodaj</a></div><div class="ttdeci">void dodaj(T dane)</div><div class="ttdoc">Dodaje nowy element zgodnie z zasadami binarnego drzewa poszukiwań.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:327</div></div>
+<div class="ttc" id="aclassdrzewo_html_a04a2e1695d1b982864ac9c07f7af4d3a"><div class="ttname"><a href="classdrzewo.html#a04a2e1695d1b982864ac9c07f7af4d3a">drzewo::druk_inorder</a></div><div class="ttdeci">void druk_inorder()</div><div class="ttdoc">Wypisuje zawartość drzewa posortowaną rosnąco.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:305</div></div>
 <div class="ttc" id="aclassdrzewo_html_a0b7072a9b9a2c07ba414ee3355ea5e20"><div class="ttname"><a href="classdrzewo.html#a0b7072a9b9a2c07ba414ee3355ea5e20">drzewo::druk_inorder</a></div><div class="ttdeci">void druk_inorder(std::string sciezka)</div><div class="ttdoc">Zapisuje zawartość drzewa posortowaną rosnąco do pliku.</div></div>
-<div class="ttc" id="aclassdrzewo_html_a249d7d50154b84eef0dfc13e26917b8d"><div class="ttname"><a href="classdrzewo.html#a249d7d50154b84eef0dfc13e26917b8d">drzewo::drzewo</a></div><div class="ttdeci">drzewo()</div><div class="ttdoc">Tworzy pustą drzewo.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:102</div></div>
-<div class="ttc" id="aclassdrzewo_html_a41ed2972ce245f82f67bfbcd2852ddc1"><div class="ttname"><a href="classdrzewo.html#a41ed2972ce245f82f67bfbcd2852ddc1">drzewo::usun</a></div><div class="ttdeci">void usun(T dane)</div><div class="ttdoc">Usuwa element drzewa o danej wartości.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:148</div></div>
-<div class="ttc" id="aclassdrzewo_html_a449272a511e38f5daf852492b8224801"><div class="ttname"><a href="classdrzewo.html#a449272a511e38f5daf852492b8224801">drzewo::druk_drzewo</a></div><div class="ttdeci">void druk_drzewo()</div><div class="ttdoc">Wypisuje zawartość drzewa do konsoli, zachowując jego strukturę.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:121</div></div>
-<div class="ttc" id="aclassdrzewo_html_a95454a04236b401e849afa4e3168d072"><div class="ttname"><a href="classdrzewo.html#a95454a04236b401e849afa4e3168d072">drzewo::drzewo</a></div><div class="ttdeci">drzewo(std::string sciezka)</div><div class="ttdoc">Tworzy pustą drzewo i wypełnia je elementami o danych z pliku.</div></div>
+<div class="ttc" id="aclassdrzewo_html_a249d7d50154b84eef0dfc13e26917b8d"><div class="ttname"><a href="classdrzewo.html#a249d7d50154b84eef0dfc13e26917b8d">drzewo::drzewo</a></div><div class="ttdeci">drzewo()</div><div class="ttdoc">Tworzy puste drzewo.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:265</div></div>
+<div class="ttc" id="aclassdrzewo_html_a41ed2972ce245f82f67bfbcd2852ddc1"><div class="ttname"><a href="classdrzewo.html#a41ed2972ce245f82f67bfbcd2852ddc1">drzewo::usun</a></div><div class="ttdeci">void usun(T dane)</div><div class="ttdoc">Usuwa element drzewa o danej wartości.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:343</div></div>
+<div class="ttc" id="aclassdrzewo_html_a449272a511e38f5daf852492b8224801"><div class="ttname"><a href="classdrzewo.html#a449272a511e38f5daf852492b8224801">drzewo::druk_drzewo</a></div><div class="ttdeci">void druk_drzewo()</div><div class="ttdoc">Wypisuje zawartość drzewa do konsoli, zachowując jego strukturę.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:293</div></div>
+<div class="ttc" id="aclassdrzewo_html_a4af42c1749d99b6ecf84701c0d70f314"><div class="ttname"><a href="classdrzewo.html#a4af42c1749d99b6ecf84701c0d70f314">drzewo::obrot_lewo</a></div><div class="ttdeci">void obrot_lewo(T dane)</div><div class="ttdoc">Wykonuje obrót w lewo drzewa względem danego elementu.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:430</div></div>
+<div class="ttc" id="aclassdrzewo_html_a525e662badc40b12d779999ac1a1ed0d"><div class="ttname"><a href="classdrzewo.html#a525e662badc40b12d779999ac1a1ed0d">drzewo::obrot_prawo</a></div><div class="ttdeci">void obrot_prawo(T dane)</div><div class="ttdoc">Wykonuje obrót w prawo drzewa względem danego elementu.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:408</div></div>
+<div class="ttc" id="aclassdrzewo_html_a95454a04236b401e849afa4e3168d072"><div class="ttname"><a href="classdrzewo.html#a95454a04236b401e849afa4e3168d072">drzewo::drzewo</a></div><div class="ttdeci">drzewo(std::string sciezka)</div><div class="ttdoc">Tworzy puste drzewo i wypełnia je elementami o danych z pliku.</div></div>
+<div class="ttc" id="aclassdrzewo_html_acdeb12d8f721bba98a503dd8fd4452c7"><div class="ttname"><a href="classdrzewo.html#acdeb12d8f721bba98a503dd8fd4452c7">drzewo::wysokosc</a></div><div class="ttdeci">int wysokosc()</div><div class="ttdoc">Znajduje wysokość całego drzewa.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:377</div></div>
+<div class="ttc" id="aclassdrzewo_html_ade447cc7594ef51ad187ec62bf59dfad"><div class="ttname"><a href="classdrzewo.html#ade447cc7594ef51ad187ec62bf59dfad">drzewo::wielkosc</a></div><div class="ttdeci">int wielkosc()</div><div class="ttdoc">Znajduje wielkość całego drzewa.</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:402</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

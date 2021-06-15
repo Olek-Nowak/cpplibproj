@@ -10,7 +10,7 @@ a sam program kompilować **wraz z plikiem biblioteki: cpplibproj.a**, poprzez s
 
 # Przykład użycia - dodawanie macierzy
 
-``` C++
+```cpp
 #include "macierz.h"
 using namespace std;
 

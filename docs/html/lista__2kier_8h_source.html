@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>cpplibproj: Plik źródłowy src/lista_2kier.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">cpplibproj
+   </div>
+   <div id="projectbrief">Biblioteka struktur danych</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('lista__2kier_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">lista_2kier.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LISTA2K</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LISTA2K</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">struct </span>lista2kElem {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    T dane_;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    lista2kElem* nast_;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    lista2kElem* poprz_;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    lista2kElem(T dane);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classlista__2kier.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlista__2kier.html">lista_2kier</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    lista2kElem&lt;T&gt; *glowa_;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    lista2kElem&lt;T&gt; *ogon_;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> dlugosc_;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    ~<a class="code" href="classlista__2kier.html">lista_2kier</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classlista__2kier.html#aeefc4e2c8d4bb8e871ff4f473bafa645">lista_2kier</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classlista__2kier.html#a43739bdaa88b5cc203d1f0a567dd5047">   31</a></span>&#160;    <a class="code" href="classlista__2kier.html#a43739bdaa88b5cc203d1f0a567dd5047">lista_2kier</a>(std::string sciezka);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classlista__2kier.html#af3f1803ab5e109c4a4ead9a08cc3733b">dlugosc</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlista__2kier.html#a75cc82f81f5e626f0a472c7465c1305d">druk</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classlista__2kier.html#aa82ef9553b359d6d1cd53bc1b8fc38f0">   39</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlista__2kier.html#aa82ef9553b359d6d1cd53bc1b8fc38f0">druk</a>(std::string sciezka);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlista__2kier.html#ac761d8e17582bf90c5e303a7269d9779">dodaj</a>(T dane);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlista__2kier.html#ac761d8e17582bf90c5e303a7269d9779">dodaj</a>(T dane, <span class="keywordtype">int</span> pozycja);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlista__2kier.html#a874c942473d3612c2b02a3f49db5f054">usun</a>(T&amp; dane);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlista__2kier.html#ae7ac2c61f420db95ce54107245edd468">usun_napotkany</a>(T dane);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlista__2kier.html#a874c942473d3612c2b02a3f49db5f054">usun</a>(<span class="keywordtype">int</span> pozycja, T&amp; dane);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlista__2kier.html#a70df84d46e4e66f0a953eca487051700">sortuj</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclasslista__2kier_html"><div class="ttname"><a href="classlista__2kier.html">lista_2kier</a></div><div class="ttdoc">Implementacja listy dynamicznej dwukierunkowej.</div><div class="ttdef"><b>Definition:</b> lista_2kier.h:19</div></div>
+<div class="ttc" id="aclasslista__2kier_html_a43739bdaa88b5cc203d1f0a567dd5047"><div class="ttname"><a href="classlista__2kier.html#a43739bdaa88b5cc203d1f0a567dd5047">lista_2kier::lista_2kier</a></div><div class="ttdeci">lista_2kier(std::string sciezka)</div><div class="ttdoc">Tworzy pustą listę dwukierunkową i wypełnia ją danymi z pliku.</div></div>
+<div class="ttc" id="aclasslista__2kier_html_a70df84d46e4e66f0a953eca487051700"><div class="ttname"><a href="classlista__2kier.html#a70df84d46e4e66f0a953eca487051700">lista_2kier::sortuj</a></div><div class="ttdeci">void sortuj()</div><div class="ttdoc">Sortuje listę.</div><div class="ttdef"><b>Definition:</b> lista_2kier.cpp:248</div></div>
+<div class="ttc" id="aclasslista__2kier_html_a75cc82f81f5e626f0a472c7465c1305d"><div class="ttname"><a href="classlista__2kier.html#a75cc82f81f5e626f0a472c7465c1305d">lista_2kier::druk</a></div><div class="ttdeci">void druk()</div><div class="ttdoc">Wypisuje zawartość listy do konsoli.</div><div class="ttdef"><b>Definition:</b> lista_2kier.cpp:62</div></div>
+<div class="ttc" id="aclasslista__2kier_html_a874c942473d3612c2b02a3f49db5f054"><div class="ttname"><a href="classlista__2kier.html#a874c942473d3612c2b02a3f49db5f054">lista_2kier::usun</a></div><div class="ttdeci">void usun(T &amp;dane)</div><div class="ttdoc">Usuwa ostatni element listy.</div><div class="ttdef"><b>Definition:</b> lista_2kier.cpp:150</div></div>
+<div class="ttc" id="aclasslista__2kier_html_aa82ef9553b359d6d1cd53bc1b8fc38f0"><div class="ttname"><a href="classlista__2kier.html#aa82ef9553b359d6d1cd53bc1b8fc38f0">lista_2kier::druk</a></div><div class="ttdeci">void druk(std::string sciezka)</div><div class="ttdoc">Zapisuje zawartość listy do pliku.</div></div>
+<div class="ttc" id="aclasslista__2kier_html_ac761d8e17582bf90c5e303a7269d9779"><div class="ttname"><a href="classlista__2kier.html#ac761d8e17582bf90c5e303a7269d9779">lista_2kier::dodaj</a></div><div class="ttdeci">void dodaj(T dane)</div><div class="ttdoc">Umieszcza nowy element na końcu listy.</div><div class="ttdef"><b>Definition:</b> lista_2kier.cpp:96</div></div>
+<div class="ttc" id="aclasslista__2kier_html_ae7ac2c61f420db95ce54107245edd468"><div class="ttname"><a href="classlista__2kier.html#ae7ac2c61f420db95ce54107245edd468">lista_2kier::usun_napotkany</a></div><div class="ttdeci">void usun_napotkany(T dane)</div><div class="ttdoc">Usuwa pierwszy napotkany element listy o danej wartości.</div><div class="ttdef"><b>Definition:</b> lista_2kier.cpp:176</div></div>
+<div class="ttc" id="aclasslista__2kier_html_aeefc4e2c8d4bb8e871ff4f473bafa645"><div class="ttname"><a href="classlista__2kier.html#aeefc4e2c8d4bb8e871ff4f473bafa645">lista_2kier::lista_2kier</a></div><div class="ttdeci">lista_2kier()</div><div class="ttdoc">Tworzy pustą listę dwukierunkową.</div><div class="ttdef"><b>Definition:</b> lista_2kier.cpp:28</div></div>
+<div class="ttc" id="aclasslista__2kier_html_af3f1803ab5e109c4a4ead9a08cc3733b"><div class="ttname"><a href="classlista__2kier.html#af3f1803ab5e109c4a4ead9a08cc3733b">lista_2kier::dlugosc</a></div><div class="ttdeci">int dlugosc()</div><div class="ttdoc">Znajduje długość listy.</div><div class="ttdef"><b>Definition:</b> lista_2kier.cpp:56</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>lista_2kier.h</b></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
